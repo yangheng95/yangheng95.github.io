@@ -41,18 +41,18 @@ lng_pair: id_links
 ###########################################################
 page_data:
   main:
-    header: "Liens"
-    info: "La description de votre page de liens."
+    header: "链接"
+    info: "链接页面描述。"
 
   # To change order of the Categories, simply change order. (you don't need to change list order.)
   category:
     - title: "JekyII / Liquid"
       type: id_jekyiiliquid
       color: "gray"
-    - title: "Création de sites web"
+    - title: "网页设计"
       type: id_webdesign
       color: "#F4A273"
-    - title: "La programmation"
+    - title: "编程"
       type: id_programming
       color: "#62b462"
 
@@ -62,33 +62,33 @@ page_data:
     - type: id_programming
       title: "Stack OverFlow"
       url: "https://stackoverflow.com/"
-      info: "Stack Overflow est un site Web de questions et réponses pour les programmeurs professionnels et enthousiastes."
+      info: "Stack Overflow是一个为专业和热情的程序员提供问答的网站。"
 
     # jekyiiliquid
     - type: id_jekyiiliquid
       title: "Jekyll"
       url: "https://jekyllrb.com/"
-      info: "Transformez votre texte brut en sites Web et blogs statiques."
+      info: "将纯文本转换成静态网站和博客。"
     - type: id_jekyiiliquid
-      title: "Aide-mémoire Jekyll"
+      title: "Jekyll小册子"
       url: "https://cloudcannon.com/community/jekyll-cheat-sheet/"
-      info: "Il y a tellement de variables et de filtres Jekyll à retenir qu'il peut être difficile de tout garder en tête. Cette feuille aide-mémoire sert de référence rapide de tout ce que Jekyll peut faire."
+      info: "要记住的Jekyll变量和过滤器非常多，要把它们全部记在脑子里可能很困难。这张小册子可以作为Jekyll所有功能的快速参考。"
     - type: id_jekyiiliquid
-      title: "Liquid pour les designers"
+      title: "对于设计师来说的Liquid"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Designers"
-      info: "Wiki Liquid pour les Designers sur GitHub."
+      info: "面向设计师的Liquid GitHub wiki"
     - type: id_jekyiiliquid
-      title: "Liquid pour programmeurs"
+      title: "面向程序员的Liquid"
       url: "https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers"
-      info: "Wiki Liquid pour les programmeurs sur GitHub."
+      info: "为程序员提供的Liquid的GitHub wiki"
     - type: id_jekyiiliquid
-      title: "Référence liquid"
+      title: "Liquid参考资料"
       url: "https://shopify.dev/api/liquid/"
-      info: "Liquid est un langage de gabarit créé par Shopify et écrit en Ruby. Il est maintenant disponible en tant que projet open source sur GitHub."
+      info: "Liquid是Shopify创建的一种模板语言，用Ruby编写。它可以作为一个开源项目在GitHub上使用。"
 
     # webdesign
     - type: id_webdesign
       title: "W3Schools"
       url: "https://www.w3schools.com/"
-      info: "W3Schools propose des didacticiels, des références et des exercices en ligne gratuits dans toutes les principales langues du Web. Couvrant des sujets populaires comme HTML, CSS, JavaScript, Python, SQL, Java et bien d'autres."
+      info: "W3Schools提供所有主要网络语言的免费在线教程、参考和练习。它涵盖了流行的主题，如HTML、CSS、JavaScript、Python、SQL和Java。"
 ---

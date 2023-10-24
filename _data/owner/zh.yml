@@ -2,28 +2,28 @@
 # Owner's Personal Information
 ###########################################################
 # This is your brand name
-brand: "Heng Yang"
+brand: "你的站点名称"
 
 # text below the brand name
-brand_sub_text: "hy345[at]exeter.ac.uk"
+brand_sub_text: "$site_sample"
 
 # used for seo meta post author (if it's not defined in post)
-name: "Heng Yang"
+name: "你的名字"
 
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "Old Library"
+  top_header_line1: "$site_welcome"
   # if commented, top header will be a single line
-  top_header_line2: "University of Exeter, UK"
+  top_header_line2: "$site_brand"
 
 # about page sub title
 about:
-  sub_title: "About Me"
+  sub_title: "$site_sample"
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
-copyright_start_year: "2023"
+copyright_start_year: "2022"
 
 # make sure creative_commons.enable is true in _data/conf/main.yml file
 creative_commons:
@@ -42,16 +42,15 @@ creative_commons:
 # seo meta this is needed for each language
 # If meta_description is not defined in front matter, it's created from (post / page) content,
 # if it has no content, this will be used for page description. It is also used in manifest.json
-meta_common_description: "Your meta description."
+meta_common_description: "你的自述。"
 
 # contact options (side nav bottom and about page)
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  - github: "https://github.com/yangheng95"
-  - email: "hy345@exeter.ac.uk"
-  - linkedin: "https://www.linkedin.com/in/heng-yang-3b6278243/"
-  - google_scholar: "https://scholar.google.com/citations?hl=en&user=NPq5a_0AAAAJ&view_op=list_works&sortby=pubdate"
+  #- github: ""
+  #- email: ""
+  #- linkedin: ""
   #- twitter: ""
   #- mastodon: ""
   #- instagram: ""

@@ -25,14 +25,15 @@ default_lng: en
 # to prevent adding languages with no folder
 # single language disables language switch
 # language order is linked to array order
-language_switch_lang_list: [en, ja, pt, fr]
+language_switch_lang_list: [en, ja, pt, fr, zh]
+# language_switch_lang_list: [en]
 
 # if the opened page is not in the user's language list,
 # suggest language(s) matching with the one(s) in browser language list and user language list.
-language_translation_offer_box: true
+language_translation_offer_box: false
 
 # Disable 3rd party translation suggestion for pages with translation.
-language_translation_offer_disable_ext_translation: true
+language_translation_offer_disable_ext_translation: false
 
 # select one below
 # 1. slideBoxTopToDown
@@ -50,16 +51,16 @@ language_switch_hover_effect: "hover-effect"
 language_switch_top_nav: false
 
 # replace text with owner[language].brand
-brand_replace: "$site_brand"
+brand_replace: ""
 
 # replace text with data.lang[language].constants.greeting
-greetings_replace: "$site_greetings"
+greetings_replace: ""
 
 # replace text with data.lang[language].constants.welcome
-welcome_replace: "$site_welcome"
+welcome_replace: ""
 
 # replace text with data.lang[language].constants.sample
-sample_replace: "$site_sample"
+sample_replace: ""
 
 ###########################################################
 #                Search
@@ -213,7 +214,7 @@ top_nav_brand_text_enable: true
 
 # set profile image
 # comment to disable the profile image
-side_nav_profile_img_path: /assets/img/posts/post_pic1.jpg
+side_nav_profile_img_path: /assets/img/default/profile_pic.jpg
 
 # this adds hover effect to bottom buttons
 side_nav_bottom_buttons_hover_effect: "hover-effect"

@@ -8,34 +8,34 @@ layout: default
 ---
 {%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
 {%- assign postsByYear = lng_pages | sort: 'date' | reverse | group_by_exp:"post", "post.date | date: site.data.lang[lng].date.year" -%}
+
 <div class="multipurpose-container">
   <h1>{{ site.data.lang[lng].archives.page_header }}</h1>
   <div class="archives">
-    {%- for year in postsByYear %}
     <div class="year">
-      <h6>{{ year.name }}</h6>
-      {%- comment %}we can directly filter days. But I wanted to leave in case list by month needs{% endcomment -%}
-      {%- assign postsByMonth = year.items | sort: 'date' | reverse | group_by_exp:"post", "post.date | date: '%m'" -%}
-      {%- for month in postsByMonth -%}
+      <h6>{{ 2023 }}</h6>
       <div class="month">
-        {%- comment %}convert string to integer{% endcomment -%}
-        {%- assign monthInt = month.name | plus: 0 -%}
-        {%- comment %}-1, since array starts from zero index{% endcomment -%}
-        {%- assign monthInt = monthInt | minus: 1 %}
-        <h6>{{ site.data.lang[lng].date.months[monthInt] }}</h6>
+        <h6>January</h6>
         <ul>
-        {%- for post in month.items %}
           <li>
-            <span>{{ post.date | date: site.data.lang[lng].date.day }}</span>
-            {%- assign page_title = post.title -%}
-            {%- include util/auto-content-post-title-rename.liquid title = page_title -%}
-            <a href="{{ post.url | relative_url }}">{{ page_title }}</a>
+            <span>01</span>
+            <a href="#">Sample Post 1</a>
           </li>
-        {%- endfor %}
+          <li>
+            <span>05</span>
+            <a href="#">Sample Post 2</a>
+          </li>
         </ul>
       </div>
-      {% endfor -%}
+      <div class="month">
+        <h6>February</h6>
+        <ul>
+          <li>
+            <span>02</span>
+            <a href="#">Sample Post 3</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    {%- endfor %}
   </div>
 </div>

@@ -141,7 +141,7 @@ home:
 
 # for archives layout
 archives:
-  title: Archive
+  title: Achievement
   button_name: Archive
   page_header: Archive
 
@@ -171,9 +171,9 @@ privacy-policy:
 
 # constants to be replaced for
 constants:
-  greetings: Hello
-  welcome: Welcome
-  sample: Sample
+  greetings: Heng Yang (杨恒), 3rd year PhD student
+  welcome: 
+  sample: 
 
 # for contact form
 contact_form:
