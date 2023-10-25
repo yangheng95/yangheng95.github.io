@@ -19,7 +19,7 @@ home:
 
 # about page sub title
 about:
-  sub_title: "About Me"
+  sub_title: "PhD Student in AI/NLP"
 
 # if you don't want to add copyright year, comment or leave it blank.
 # the year during which the claimed copyright for the work was first asserted.
@@ -50,7 +50,7 @@ meta_common_description: "Your meta description."
 contacts:
   - github: "https://github.com/yangheng95"
   - email: "hy345@exeter.ac.uk"
-  - linkedin: "https://www.linkedin.com/in/heng-yang-3b6278243/"
+  - linkedin: "heng-yang-3b6278243/"
   - google_scholar: "https://scholar.google.com/citations?hl=en&user=NPq5a_0AAAAJ&view_op=list_works&sortby=pubdate"
   #- twitter: ""
   #- mastodon: ""

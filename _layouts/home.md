@@ -41,6 +41,14 @@ layout: default
 
 I am a PhD student at the University of Exeter. My research interests include natural language processing, computer vision, bioinformatics (RNA modeling), etc. Please find the details of my study in the following sections.
 
+## Research Topics
+
+- **Textual Adversarial Attack/Defense**
+- **Sentiment Analysis**
+- **bio-RNA pretraining & modeling**
+- **Code language modeling**
+- **Diffusion models**
+
 ## First-author Publications
 
 **[CCF A]** **_H Yang_**, K Li. [Boosting Text Augmentation via Hybrid Instance Filtering Framework](https://aclanthology.org/2023.findings-acl.105.pdf) (ACL 2023 **Findings**)
@@ -94,6 +102,7 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 ## Community Contribution
 <p align="left"><img src="https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true" alt="yangheng95" />
+
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yangheng95" alt="yangheng95" /> </p>
 
 {% endcapture %}

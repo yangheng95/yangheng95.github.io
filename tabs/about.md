@@ -38,7 +38,29 @@ img: ":about.jpg"
 
 {%- comment -%} Please delete below and place your page content here {%- endcomment -%}
 
-{%- include util/auto-content-generator.liquid -%}
-{{ website_info_text_first }}
+<!-- {%- include util/auto-content-generator.liquid -%} -->
+<!-- {{ website_info_text_first }} -->
 
-{{ website_info_text_second }}
+<!-- {{ website_info_text_second }} -->
+
+<div class="self-intro-text markdown-style">
+{% capture markdown_content %}
+
+## About Me
+
+I am very interested in programming since I was a junior high student, so I majored in computer science in these years. 
+My interests include natural language processing and computer vision, as well as multi-objective optimization. I have dived into many of the AI related topics and published some papers to share my findings. 
+
+My most popular work is PyABSA, a framework originally developed for sentiment analysis. Besides, I have released some interesting open-source works which can be found on my GitHub page and Huggingface page.
+
+I am also enthusiastic about making toy demonstrations, which are also available in GitHub or Huggingface. If you are interested to cooperate with me, please feel free to contact me.
+
+## Contact me by WeChat
+
+Please kindly let me know who you are while contacting me.
+
+<p align="left"> <img src="../assets/img/home/wechat_contact.jpg" alt="yangheng95" style="width:50%;" /> </p>
+
+{% endcapture %}
+{{ markdown_content | markdownify }}
+</div>
