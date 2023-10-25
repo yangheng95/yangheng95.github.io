@@ -55,12 +55,14 @@ My most popular work is PyABSA, a framework originally developed for sentiment a
 
 I am also enthusiastic about making toy demonstrations, which are also available in GitHub or Huggingface. If you are interested to cooperate with me, please feel free to contact me.
 
-## Contact me by WeChat
+## Contact me
 
-Please kindly let me know who you are while contacting me.
+The fastest way to contact me is instant massagers, e.g., WeChat and What's APP. Please kindly let me know who you are while contacting me.
 
-<p align="left"> <img src="../assets/img/home/wechat_contact.jpg" alt="yangheng95" style="width:50%;" /> </p>
-
+<div style="display: flex; justify-content: space-between;">
+    <p> <img src="../assets/img/about/wechat.jpg" alt="wechat" style="width:40%;" /> </p>
+    <p> <img src="../assets/img/about/whatsapp.png" alt="whatsapp" style="width:100%;" /> </p>
+</div>
 {% endcapture %}
 {{ markdown_content | markdownify }}
 </div>

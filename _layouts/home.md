@@ -29,13 +29,7 @@ layout: default
     </div>
   </div>
   <div class="home-intro-text markdown-style">
-  {{ content }}
-  </div>
-</div>
-
-
-<div class="self-intro-text markdown-style">
-{% capture markdown_content %}
+  {% capture markdown_content %}
 
 # Hi there!
 
@@ -107,7 +101,10 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 {% endcapture %}
 {{ markdown_content | markdownify }}
+  </div>
 </div>
+
+
 
 <!-- 
 <div class="multipurpose-container">
