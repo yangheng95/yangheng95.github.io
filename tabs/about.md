@@ -60,7 +60,7 @@ I am also enthusiastic about making toy demonstrations, which are also available
 The fastest way to contact me is instant massagers, e.g., WeChat and What's APP. Please kindly let me know who you are while contacting me.
 
 <div style="display: flex; justify-content: space-between;">
-    <p> <img src="../assets/img/about/wechat.jpg" alt="wechat" style="width:40%;" /> </p>
+    <p> <img src="../assets/img/about/wechat.jpg" alt="wechat" style="width:100%;" /> </p>
     <p> <img src="../assets/img/about/whatsapp.png" alt="whatsapp" style="width:100%;" /> </p>
 </div>
 {% endcapture %}
