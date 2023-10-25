@@ -77,7 +77,7 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [Lcf: A local context focus mechanism
 - [![Downloads](https://pepy.tech/badge/boostaug)](https://pepy.tech/project/boostaug) [BoostAug](https://github.com/yangheng95/BoostAug): it can achieve 1-2% or at most 5% absolute improvement based on existing datasets and models 
 - [Adversarial defense](https://github.com/yangheng95/TAD): TBC
 - [ABSA DPT](https://github.com/yangheng95/ABSADatasets/tree/v1.2/DPT): This is a web-based ABSA dataset annotation tool that can help you easily make an ABSA dataset and train it using PyABSA.
-- [More works are going to be publised]
+- [More works are going to be published]
 
 ## Education
 
