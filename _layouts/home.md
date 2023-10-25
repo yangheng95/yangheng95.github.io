@@ -89,8 +89,8 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 ## Awards
 
-- **2020.9** **Chinese National Graduate Scholarship** 
-- **2018.6** **Outstanding Graduate of Yangtze University** 
+- **2020.9** Chinese National Graduate Scholarship
+- **2018.6** Outstanding Graduate of Yangtze University
 
 ## Community Contribution
 <p align="left"><img src="https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true" alt="yangheng95" />
