@@ -41,7 +41,7 @@ layout: default
 
 I am a PhD student at the University of Exeter. My research interests include natural language processing, computer vision, bioinformatics (RNA modeling), etc. Please find the details of my study in the following sections.
 
-## First Author Publications
+## First-author Publications
 
 **[CCF A]** **_H Yang_**, K Li. [Boosting Text Augmentation via Hybrid Instance Filtering Framework](https://aclanthology.org/2023.findings-acl.105.pdf) (ACL 2023 **Findings**)
 
@@ -61,7 +61,7 @@ I am a PhD student at the University of Exeter. My research interests include na
 
 B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism for aspect-based sentiment classification](https://www.semanticscholar.org/paper/LCF%3A-A-Local-Context-Focus-Mechanism-for-Sentiment-Zeng-Yang/67d5ab20d15518dc876b0732a768a88262635425) (Applied Sciences 2019).
 
-**K Li is my PhD's supervisor. B Zeng was my master's supervisor. **
+**K Li is my PhD's supervisor. B Zeng was my master's supervisor.**
 
 # Co-authored Publications
 
@@ -72,7 +72,7 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 ### [Super-resolution anime diffusion](https://huggingface.co/spaces/yangheng/Super-Resolution-Anime-Diffusion)
 
-## Personal open-source repository
+## Open-source Repositories
 - [![Downloads](https://pepy.tech/badge/pyabsa)](https://pepy.tech/project/pyabsa) [PyABSA](https://github.com/yangheng95/PyABSA): State-of-the-art models and simplified interface for ABSA  
 - [![Downloads](https://pepy.tech/badge/findfile)](https://pepy.tech/project/findfile) [FindFile](https://github.com/yangheng95/findfile): A simple tool to help find your file wherever it locates 
 - [![Downloads](https://pepy.tech/badge/metric-visualizer)](https://pepy.tech/project/metric-visualizer) [Metric-Visualizer](https://github.com/yangheng95/metric_visualizer): Help you to easily and quickly make acdemic plots, e.g., box and trajectory plots 
@@ -89,8 +89,8 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 ## Awards
 
-- **Chinese National Graduate Scholarship** 2020.9
-- **Outstanding Graduate of Yangtze University** 2018.6
+- **2020.9** **Chinese National Graduate Scholarship** 
+- **2018.6** **Outstanding Graduate of Yangtze University** 
 
 ## Community Contribution
 <p align="left"><img src="https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true" alt="yangheng95" />
