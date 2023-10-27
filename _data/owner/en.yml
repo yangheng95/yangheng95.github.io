@@ -48,7 +48,7 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  - github: "https://github.com/yangheng95"
+  - github: "yangheng95"
   - email: "hy345@exeter.ac.uk"
   - linkedin: "heng-yang-3b6278243/"
   - google_scholar: "https://scholar.google.com/citations?hl=en&user=NPq5a_0AAAAJ&view_op=list_works&sortby=pubdate"
