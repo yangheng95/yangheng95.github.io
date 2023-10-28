@@ -34,12 +34,13 @@ layout: default
 # Hi there!
 
 I am a PhD student at the University of Exeter. My research interests include natural language processing, computer vision, bioinformatics (RNA modeling), etc. Please find the details of my study in the following sections.
+Find me on [GitHub](https://github.com/yangheng95) or [Google Scholar](https://scholar.google.com/citations?hl=en&user=NPq5a_0AAAAJ&view_op=list_works&sortby=pubdate).
 
 ## Research Topics
 
 - **Textual Adversarial Attack/Defense**
-- **Sentiment Analysis**
-- **bio-RNA pretraining & modeling**
+- **Sentiment (Coherency) Analysis**
+- **bio-RNA Sequence pretraining & modeling**
 - **Code language modeling**
 - **Diffusion models**
 
@@ -71,15 +72,15 @@ B Zeng, **_H Yang_**, R Xu, W Zhou, X Han. [LCF: A local context focus mechanism
 
 ## Toy Demos:
 ### [Aspect-based sentiment analysis (ABSA)](https://huggingface.co/spaces/yangheng/PyABSA)
-
 ### [Super-resolution anime diffusion](https://huggingface.co/spaces/yangheng/Super-Resolution-Anime-Diffusion)
 
 ## Open-source Repositories
 - [![Downloads](https://pepy.tech/badge/pyabsa)](https://pepy.tech/project/pyabsa) [PyABSA](https://github.com/yangheng95/PyABSA): State-of-the-art models and simplified interface for ABSA  
 - [![Downloads](https://pepy.tech/badge/findfile)](https://pepy.tech/project/findfile) [FindFile](https://github.com/yangheng95/findfile): A simple tool to help find your file wherever it locates 
-- [![Downloads](https://pepy.tech/badge/metric-visualizer)](https://pepy.tech/project/metric-visualizer) [Metric-Visualizer](https://github.com/yangheng95/metric_visualizer): Help you to easily and quickly make acdemic plots, e.g., box and trajectory plots 
-- [![Downloads](https://pepy.tech/badge/boostaug)](https://pepy.tech/project/boostaug) [BoostAug](https://github.com/yangheng95/BoostAug): it can achieve 1-2% or at most 5% absolute improvement based on existing datasets and models 
-- [Adversarial defense](https://github.com/yangheng95/TAD): TBC
+- [![Downloads](https://pepy.tech/badge/metric-visualizer)](https://pepy.tech/project/metric-visualizer) [Metric-Visualizer](https://github.com/yangheng95/metric_visualizer): Help you to easily and quickly make academic plots, e.g., box and trajectory plots 
+- [![Downloads](https://pepy.tech/badge/boostaug)](https://pepy.tech/project/boostaug) [BoostAug](https://github.com/yangheng95/BoostAug): it can achieve at most 5% absolute improvement based on full-scale datasets for most models.
+- [InstOptima](https://github.com/yangheng95/InstOptima): [Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators](https://arxiv.org/abs/2310.17630).
+- [Adversarial defense](https://github.com/yangheng95/TAD): This work propose an effective adversarial defense method for textual adversarial defense.
 - [ABSA DPT](https://github.com/yangheng95/ABSADatasets/tree/v1.2/DPT): This is a web-based ABSA dataset annotation tool that can help you easily make an ABSA dataset and train it using PyABSA.
 - [More works are going to be published]
 
