@@ -13,9 +13,9 @@ name: "Heng Yang"
 # home page top header texts
 home:
   # you can also use $site_brand, $site_greetings, $site_welcome in line1 and line2 for replacing texts.
-  top_header_line1: "Old Library"
+  top_header_line1: "University of Exeter, UK"
   # if commented, top header will be a single line
-  top_header_line2: "University of Exeter, UK"
+  top_header_line2: ""
 
 # about page sub title
 about:
