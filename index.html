@@ -7,6 +7,47 @@
     <link rel="icon" href="favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/main.bundle.css">
     <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+       <style>
+        .modal-card {
+            max-width: 90vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+        .modal-card-body {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        .carousel {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .carousel-cell {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* Maintains 4:3 aspect ratio */
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .carousel-cell img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media screen and (min-width: 769px) {
+            .modal-card {
+                max-width: 60vw;
+            }
+            .carousel-cell {
+                padding-bottom: 60%; /* Slightly shorter for larger screens */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -108,8 +149,8 @@
         <p>I am a PhD student at the University of Exeter, specializing in genomics, bioinformatics, and LLMs.
             My research includes biological sequence modeling, sentiment analysis, adversarial attacks,
             and open-source tool development. I’ve contributed to the field with <strong>OmniGenomeBench</strong>
-            and <strong>PyABSA</strong>, and published in leading conferences like ACL, EMNLP, CIKM and EACL
-            as the first author.
+            and <strong>PyABSA</strong>, and published in leading conferences like ACL, EMNLP, CIKM, EACL and IEEE TSE,
+            etc.
             <br><br>
              actively contribute to platforms like
             <strong>GitHub</strong> and <strong>Hugging Face</strong>, sharing tools like
@@ -129,7 +170,7 @@
         <!-- First five publications (always visible) -->
         <div class="card">
             <div class="card-content">
-                <p><strong>OmniGenBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation
+                <p><strong>OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation
                     Models</strong></p>
                 <p><strong>Heng Yang</strong>, Jack Cole, Ke Li | Arxiv 2024 | <a
                         href="https://arxiv.org/abs/2410.01784">Link</a></p>
@@ -269,21 +310,19 @@
                     <div class="tile is-parent">
                         <article class="tile is-child notification is-flex is-flex-direction-column">
                             <div class="content is-flex-grow-1">
-                                <p class="title">OmniGenomeBench</p>
+                                <div class="project-title is-flex is-align-items-center">
+                                    <p class="title">OmniGenomeBench</p>
+                                </div>
                                 <figure class="image is-3by2">
                                     <img class="modal-trigger" data-target="project-1-modal"
                                          src="img/OmniGenomeBench.png" alt="OmniGenomeBench">
                                 </figure>
                                 <p>OmniGenomeBench is a large-scale in-silico benchmarking framework for genomic
-                                    foundation
-                                    models (GFMs). It addresses the lack of standardized tools for evaluating GFMs,
-                                    which are
-                                    essential for understanding and synthesizing genome sequences. The framework
-                                    integrates
-                                    millions of genomic sequences across a variety of tasks, automating the benchmarking
-                                    process
-                                    for diverse GFMs. OmniGenomeBench democratizes genome modeling by providing an
-                                    open-source,
+                                    foundation models (GFMs). It addresses the lack of standardized tools for
+                                    evaluating GFMs, which are essential for understanding and synthesizing genome
+                                    sequences. The framework integrates millions of genomic sequences across
+                                    a variety of tasks, automating the benchmarking process for diverse GFMs.
+                                    OmniGenomeBench democratizes genome modeling by providing an open-source,
                                     user-friendly interface that supports complex tasks like RNA design and structure
                                     prediction, with a public leaderboard to track performance across models.
                                 </p>
@@ -306,24 +345,21 @@
                     <div class="tile is-parent">
                         <article class="tile is-child notification is-flex is-flex-direction-column">
                             <div class="content is-flex-grow-1">
-                                <p class="title">PyABSA</p>
+                                <div class="project-title is-flex is-align-items-center">
+                                    <p class="title">PyABSA</p>
+                                </div>
                                 <figure class="image is-4by3">
                                     <img class="modal-trigger" data-target="project-2-modal" src="img/PyABSA.png"
                                          alt="PyABSA">
                                 </figure>
                                 <p>PyABSA (Aspect-Based Sentiment Analysis) is a modularized framework designed to
-                                    simplify the
-                                    implementation of sentiment analysis tasks. It offers pre-trained models and
-                                    datasets for
-                                    both research and production environments, making it easy to reproduce and benchmark
-                                    ABSA
-                                    tasks, including aspect term extraction and sentiment classification. PyABSA
-                                    integrates with
-                                    widely used machine learning libraries such as Hugging Face, enabling developers to
-                                    deploy
-                                    state-of-the-art ABSA models with ease. It is a robust tool for anyone looking to
-                                    apply
-                                    sentiment analysis in real-world applications, from research to enterprise use.
+                                    simplify the implementation of sentiment analysis tasks. It offers pre-trained
+                                    models and datasets for both research and production environments, making it easy
+                                    to reproduce and benchmark ABSA tasks, including aspect term extraction and
+                                    sentiment classification. PyABSA integrates with widely used machine learning
+                                    libraries such as Hugging Face, enabling developers to deploy state-of-the-art
+                                    ABSA models with ease. It is a robust tool for anyone looking to apply sentiment
+                                    analysis in real-world applications, from research to enterprise use.
                                 </p>
                             </div>
                             <div class="mt-auto has-text-centered">
@@ -346,6 +382,7 @@
 </section>
 
 
+
 <!-- Modal for OmniGenBench -->
 <div id="project-1-modal" class="modal">
     <div class="modal-background"></div>
@@ -355,20 +392,19 @@
             <button class="delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
-
             <div id="project-1-modal-carousel" class="carousel">
-                <figure class="image is-4by3 carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/1.png">
+                <figure class="carousel-cell">
+                    <img src="img/carousel/OmniGenomeBench/1.png" alt="OmniGenBench Image 1">
                 </figure>
-                <figure class="image is-4by3 carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/2.png">
+                <figure class="carousel-cell">
+                    <img src="img/carousel/OmniGenomeBench/2.png" alt="OmniGenBench Image 2">
                 </figure>
-                <figure class="image is-4by3 carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/3.png">
+                <figure class="carousel-cell">
+                    <img src="img/carousel/OmniGenomeBench/3.png" alt="OmniGenBench Image 3">
                 </figure>
             </div>
 
-            <div class="content">
+            <div class="content" style="font-size: x-large">
                 <p><strong>OmniGenBench</strong> is a large-scale in-silico benchmarking framework for genomic
                     foundation models (GFMs). It addresses key challenges such as the lack of benchmarking tools and
                     open-source software for genomic modeling. OmniGenBench integrates millions of genomic sequences
@@ -378,7 +414,6 @@
                     genomic tasks like RNA design and structure prediction. The framework also includes a public
                     leaderboard to track benchmarking performance.</p>
 
-                <!-- GitHub Project Link -->
                 <p><a href="https://github.com/yangheng95/OmniGenomeBench" target="_blank" class="button is-link">View
                     on GitHub</a></p>
 
@@ -389,9 +424,7 @@
                     <span class="tag">RNA</span>
                     <span class="tag">Open-source</span>
                 </div>
-
             </div>
-
         </section>
         <footer class="modal-card-foot">
             <button class="button is-success">Close</button>
@@ -408,20 +441,19 @@
             <button class="delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
-
             <div id="project-2-modal-carousel" class="carousel">
-                <figure class="image is-4by3 carousel-cell">
+                <figure class="carousel-cell">
                     <img src="img/carousel/PyABSA/1.png" alt="PyABSA Image 1">
                 </figure>
-                <figure class="image is-4by3 carousel-cell">
+                <figure class="carousel-cell">
                     <img src="img/carousel/PyABSA/2.png" alt="PyABSA Image 2">
                 </figure>
-                <figure class="image is-4by3 carousel-cell">
+                <figure class="carousel-cell">
                     <img src="img/carousel/PyABSA/3.png" alt="PyABSA Image 3">
                 </figure>
             </div>
 
-            <div class="content">
+            <div class="content" style="font-size: x-large">
                 <p><strong>PyABSA</strong> is a modularized framework designed for Aspect-Based Sentiment Analysis
                     (ABSA). It simplifies the process of deploying state-of-the-art models for ABSA tasks, including
                     aspect term extraction and sentiment classification.</p>
@@ -430,7 +462,6 @@
                     benchmarking. With integrations like Hugging Face and TensorFlow, PyABSA is accessible to
                     researchers and developers in various domains.</p>
 
-                <!-- GitHub Project Link -->
                 <p><a href="https://github.com/yangheng95/PyABSA" target="_blank" class="button is-link">View on
                     GitHub</a></p>
 
@@ -441,15 +472,14 @@
                     <span class="tag">Python</span>
                     <span class="tag">Open-source</span>
                 </div>
-
             </div>
-
         </section>
         <footer class="modal-card-foot">
             <button class="button is-success">Close</button>
         </footer>
     </div>
 </div>
+
 
 <section class="section">
     <div class="container">
