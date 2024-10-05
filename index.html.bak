@@ -30,7 +30,7 @@
         .carousel-cell {
             width: 100%;
             height: 0;
-            padding-bottom: 75%;
+            padding-bottom: 75%; /* Maintains 4:3 aspect ratio */
             position: relative;
             margin-bottom: 1rem;
         }
@@ -50,7 +50,7 @@
             }
 
             .carousel-cell {
-                padding-bottom: 60%;
+                padding-bottom: 60%; /* Slightly shorter for larger screens */
             }
         }
     </style>
@@ -87,14 +87,13 @@
     </div>
 </nav>
 
-
 <section class="hero is-primary">
     <div class="hero-body">
         <div class="container">
             <div class="level">
                 <div class="level-item has-text-centered">
                     <figure class="image is-128x128">
-                        <img class="is-rounded" src="img/avatar.jpg" alt="Portrait of Heng Yang">
+                        <img class="is-rounded" src="img/avatar.jpg">
                     </figure>
                 </div>
             </div>
@@ -110,9 +109,12 @@
                     <br>
                     <br>
                     <h2 class="subtitle">
-                        Loving Genomic Foundation Models <strong>(GFMs)</strong>
+                        Loving Genomic Foundation Models <strong>(GFMs) </strong>
                         and Large Language Models <strong>(LLMs)</strong>
                     </h2>
+                    <p>
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -125,7 +127,7 @@
                         <i class="fab fa-github"></i> <strong>GitHub</strong>
                     </a>
                     <a href="https://huggingface.co/yangheng">
-                        <i class="far fa-laugh-squint"></i> <strong>HuggingFace</strong>
+                        🤗 <strong>HuggingFace</strong>
                     </a>
                     <a href="https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en" class="icon has-text-light">
                         <i class="fas fa-graduation-cap"></i> <strong>Scholar</strong>
@@ -145,6 +147,7 @@
     </div>
 </section>
 
+
 <section class="section">
     <div class="container">
         <h1 class="title"><i class="fas fa-user"></i> About Me</h1>
@@ -152,12 +155,12 @@
         <p>I am a PhD student at the University of Exeter, specializing in genomics, bioinformatics, and LLMs.
             My research includes biological sequence modeling, sentiment analysis, adversarial attacks,
             and open-source tool development. I’ve contributed to the field with <strong>OmniGenomeBench</strong>
-            and <strong>PyABSA</strong>, and published in leading conferences like ACL, EMNLP, CIKM, EACL, and IEEE TSE,
-            among others.
+            and <strong>PyABSA</strong>, and published in leading conferences like ACL, EMNLP, CIKM, EACL and IEEE TSE,
+            etc.
             <br><br>
-            I actively contribute to platforms like
+            actively contribute to platforms like
             <strong>GitHub</strong> and <strong>Hugging Face</strong>, sharing tools like
-            FindFile, MetricVisualizer, and BoostAug. I’m committed to advancing AI and NLP
+            FindFile, MetricVisualizer, BoostAug. I’m committed to advancing AI and NLP
             while making these technologies accessible through open-source contributions.
             <br><br>
             I am expected to graduate in 2025 and am open to new opportunities in academia and industry.
@@ -175,7 +178,7 @@
             <div class="card-content">
                 <p><strong>OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation
                     Models</strong></p>
-                <p><strong>Heng Yang</strong>, Jack Cole, Ke Li | arXiv 2024 | <a
+                <p><strong>Heng Yang</strong>, Jack Cole, Ke Li | Arxiv 2024 | <a
                         href="https://arxiv.org/abs/2410.01784">Link</a></p>
             </div>
         </div>
@@ -184,7 +187,7 @@
             <div class="card-content">
                 <p><strong>OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation
                     Models</strong></p>
-                <p><strong>Heng Yang</strong>, Ke Li | arXiv 2024 | <a href="https://arxiv.org/abs/2407.11242">Link</a>
+                <p><strong>Heng Yang</strong>, Ke Li | Arxiv 2024 | <a href="https://arxiv.org/abs/2407.11242">Link</a>
                 </p>
             </div>
         </div>
@@ -194,7 +197,7 @@
         <div class="card">
             <div class="card-content">
                 <p><strong>PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants</strong></p>
-                <p> Haopeng Yu, <strong>Heng Yang</strong>, Wenqing Sun, Zongyun Yan, Xiaofei Yang, Huakun Zhang, Yiliang Ding, Ke Li | bioRxiv 2024 | <a href="https://www.biorxiv.org/content/10.1101/2024.06.24.600509v2">Link</a></p>
+                <p> Haopeng Yu, <strong>Heng Yang</strong>, Wenqing Sun, Zongyun Yan, Xiaofei Yang, Huakun Zhang, Yiliang Ding, Ke Li | Biorxiv 2024 | <a href="https://www.biorxiv.org/content/10.1101/2024.06.24.600509v2">Link</a></p>
             </div>
         </div>
         -->
@@ -287,6 +290,7 @@
     </div>
 </section>
 
+
 <script>
     function togglePublications() {
         var morePublications = document.getElementById("morePublications");
@@ -304,7 +308,7 @@
 
 <section class="section">
     <div class="container">
-        <h1 class="title"><i class="fas fa-laptop-code"></i> Open-source Projects</h1>
+        <h1 class="title"><i class="fas fa-code-branch"></i> Open-source Projects</h1>
         <hr/>
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-12">
@@ -384,31 +388,32 @@
     </div>
 </section>
 
-<!-- Modal for OmniGenomeBench -->
+
+<!-- Modal for OmniGenBench -->
 <div id="project-1-modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
-            <p class="modal-card-title">OmniGenomeBench</p>
+            <p class="modal-card-title">OmniGenBench</p>
             <button class="delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
             <div id="project-1-modal-carousel" class="carousel">
                 <figure class="carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/1.png" alt="OmniGenomeBench Image 1">
+                    <img src="img/carousel/OmniGenomeBench/1.png" alt="OmniGenBench Image 1">
                 </figure>
                 <figure class="carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/2.png" alt="OmniGenomeBench Image 2">
+                    <img src="img/carousel/OmniGenomeBench/2.png" alt="OmniGenBench Image 2">
                 </figure>
                 <figure class="carousel-cell">
-                    <img src="img/carousel/OmniGenomeBench/3.png" alt="OmniGenomeBench Image 3">
+                    <img src="img/carousel/OmniGenomeBench/3.png" alt="OmniGenBench Image 3">
                 </figure>
             </div>
 
             <div class="content" style="font-size: x-large">
-                <p><strong>OmniGenomeBench</strong> is a large-scale in-silico benchmarking framework for genomic
+                <p><strong>OmniGenBench</strong> is a large-scale in-silico benchmarking framework for genomic
                     foundation models (GFMs). It addresses key challenges such as the lack of benchmarking tools and
-                    open-source software for genomic modeling. OmniGenomeBench integrates millions of genomic sequences
+                    open-source software for genomic modeling. OmniGenBench integrates millions of genomic sequences
                     across hundreds of tasks, providing a standardized and automated benchmarking suite for diverse
                     GFMs.</p>
                 <p>In addition to benchmarking, it offers user-friendly interfaces and tutorials for automating complex
@@ -555,7 +560,7 @@
 
 <section class="section">
     <div class="container">
-        <h1 class="title"><i class="fas fa-comment"></i> Hugging Face Spaces</h1>
+        <h1 class="title"><i class="fas fa-laptop-code"></i> Hugging Face Spaces</h1>
         <hr/>
         <div class="content">
             <ul>
@@ -587,7 +592,7 @@
             if (response.ok) {
                 const data = await response.json();
                 const paddedDownloads = padNumber(data.downloads, 8); // Pad to 8 digits
-                document.getElementById(elementId).textContent = ` ${paddedDownloads} downloads/month 📦`;
+                document.getElementById(elementId).textContent = `📦 ${paddedDownloads} downloads/month`;
             }
         } catch (error) {
             console.error("Error fetching model downloads:", error);
@@ -611,7 +616,7 @@
         <div class="card">
             <div class="card-content">
                 <div class="content">
-                    <p class="title is-4">University of Exeter, United Kingdom</p>
+                    <p class="title is-4">University of Exeter, UK</p>
                     <p class="subtitle is-6">PhD in AI/NLP -
                         <time datetime="2021-9">September 2021</time>
                         -
@@ -814,6 +819,7 @@
         </p>
     </div>
 </footer>
+
 
 <script src="js/bundle.js"></script>
 </body>
