@@ -1,0 +1,631 @@
+<div>
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-user"></i> About Me</h1>
+            <hr/>
+            <p>
+                I am a PhD student at the University of Exeter, specializing in genomics, bioinformatics, and LLMs.
+                My research includes biological sequence modeling, sentiment analysis, adversarial attacks,
+                and open-source tool development. I’ve contributed to the field with <strong>OmniGenomeBench</strong>
+                and <strong>PyABSA</strong>, and published in leading conferences like ACL, EMNLP, CIKM, EACL, and IEEE TSE,
+                among others.
+                <br><br>
+                I actively contribute to platforms like
+                <strong>GitHub</strong> and <strong>Hugging Face</strong>, sharing tools like
+                FindFile, MetricVisualizer, and BoostAug. I’m committed to advancing AI and NLP
+                while making these technologies accessible through open-source contributions.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-book"></i> Publications</h1>
+            <hr/>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models</strong></p>
+                    <p><strong>Heng Yang</strong>, Jack Cole, Ke Li | arXiv 2024 | <a href="https://arxiv.org/abs/2410.01784">Link</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation Models</strong></p>
+                    <p><strong>Heng Yang</strong>, Ke Li | arXiv 2024 | <a href="https://arxiv.org/abs/2407.11242">Link</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples</strong></p>
+                    <p><strong>Heng Yang</strong>, Ke Li | EMNLP 2024 | <a href="https://openreview.net/forum?id=gLcpCzxoiM">Link</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction</strong></p>
+                    <p><strong>Heng Yang</strong>, Ke Li | EMNLP 2024 | <a href="https://openreview.net/forum?id=2ewzfedbQv">Link</a></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <p><strong>Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation</strong></p>
+                    <p><strong>Heng Yang</strong>, Ke Li | EACL 2024 | <a href="https://aclanthology.org/2024.eacl-main.195">Link</a></p>
+                </div>
+            </div>
+
+            <div id="morePublications" style="display: none;">
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis</strong></p>
+                        <p><strong>Heng Yang</strong>, Cheng Zhang, Ke Li | CIKM 2023 | <a href="https://dl.acm.org/doi/abs/10.1145/3583780.3614752">Link</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators</strong></p>
+                        <p><strong>Heng Yang</strong>, Ke Li | EMNLP 2023 | <a href="https://aclanthology.org/2023.findings-emnlp.907">Link</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Boosting Text Augmentation via Hybrid Instance Filtering Framework</strong></p>
+                        <p><strong>Heng Yang</strong>, Ke Li | ACL 2023 | <a href="https://aclanthology.org/2023.findings-acl.105">Link</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls</strong></p>
+                        <p>Ke Li, <strong>Heng Yang</strong> | IEEE TSE, 2023 | <a href="https://ieeexplore.ieee.org/document/10372386">Link</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction</strong></p>
+                        <p><strong>Heng Yang</strong>, Biqing Zeng, et al. | Neurocomputing, 2021 | <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534">Link</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="toggleButton" class="button is-link is-light" onclick="togglePublications()">Click to Show More</button>
+        </div>
+    </section>
+
+    <script>
+        function togglePublications() {
+            var morePublications = document.getElementById("morePublications");
+            var toggleButton = document.getElementById("toggleButton");
+
+            if (morePublications.style.display === "none") {
+                morePublications.style.display = "block";
+                toggleButton.innerHTML = "Show Less";
+            } else {
+                morePublications.style.display = "none";
+                toggleButton.innerHTML = "Show More";
+            }
+        }
+    </script>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-laptop-code"></i> Open-source Projects</h1>
+            <hr/>
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-12">
+                    <div class="tile">
+                        <!-- OmniGenomeBench Project -->
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-flex is-flex-direction-column">
+                                <div class="content is-flex-grow-1">
+                                    <div class="project-title is-flex is-align-items-center">
+                                        <p class="title">OmniGenomeBench</p>
+                                    </div>
+                                    <figure class="image is-3by2">
+                                        <img class="modal-trigger" data-target="project-1-modal"
+                                             src="img/OmniGenomeBench.png" alt="OmniGenomeBench">
+                                    </figure>
+                                    <p>OmniGenomeBench is a large-scale in-silico benchmarking framework for genomic
+                                        foundation models (GFMs). It addresses the lack of standardized tools for
+                                        evaluating GFMs, which are essential for understanding and synthesizing genome
+                                        sequences. The framework integrates millions of genomic sequences across
+                                        a variety of tasks, automating the benchmarking process for diverse GFMs.
+                                        OmniGenomeBench democratizes genome modeling by providing an open-source,
+                                        user-friendly interface that supports complex tasks like RNA design and
+                                        structure
+                                        prediction, with a public leaderboard to track performance across models.
+                                    </p>
+                                </div>
+                                <div class="mt-auto has-text-centered">
+                                    <p class="mb-4">
+                                        <!-- GitHub and PePy Badges -->
+                                        <img src="https://img.shields.io/github/stars/yangheng95/OmniGenomeBench?style=social"
+                                             alt="GitHub stars">
+                                        <img src="https://pepy.tech/badge/omnigenome" alt="PePy downloads">
+                                    </p>
+                                    <!-- GitHub Link -->
+                                    <a href="https://github.com/yangheng95/OmniGenomeBench" target="_blank"
+                                       class="button is-link">View on GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- PyABSA Project -->
+                        <div class="tile is-parent">
+                            <article class="tile is-child notification is-flex is-flex-direction-column">
+                                <div class="content is-flex-grow-1">
+                                    <div class="project-title is-flex is-align-items-center">
+                                        <p class="title">PyABSA</p>
+                                    </div>
+                                    <figure class="image is-4by3">
+                                        <img class="modal-trigger" data-target="project-2-modal" src="img/PyABSA.png"
+                                             alt="PyABSA">
+                                    </figure>
+                                    <p>PyABSA (Aspect-Based Sentiment Analysis) is a modularized framework designed to
+                                        simplify the implementation of sentiment analysis tasks. It offers pre-trained
+                                        models and datasets for both research and production environments, making it
+                                        easy
+                                        to reproduce and benchmark ABSA tasks, including aspect term extraction and
+                                        sentiment classification. PyABSA integrates with widely used machine learning
+                                        libraries such as Hugging Face, enabling developers to deploy state-of-the-art
+                                        ABSA models with ease. It is a robust tool for anyone looking to apply sentiment
+                                        analysis in real-world applications, from research to enterprise use.
+                                    </p>
+                                </div>
+                                <div class="mt-auto has-text-centered">
+                                    <p class="mb-4">
+                                        <!-- GitHub and PePy Badges -->
+                                        <img src="https://img.shields.io/github/stars/yangheng95/PyABSA?style=social"
+                                             alt="GitHub stars">
+                                        <img src="https://pepy.tech/badge/pyabsa" alt="PePy downloads">
+                                    </p>
+                                    <!-- GitHub Link -->
+                                    <a href="https://github.com/yangheng95/PyABSA" target="_blank"
+                                       class="button is-link">View
+                                        on GitHub</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for OmniGenomeBench -->
+    <div id="project-1-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">OmniGenomeBench</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="project-1-modal-carousel" class="carousel">
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/OmniGenomeBench/1.png" alt="OmniGenomeBench Image 1">
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/OmniGenomeBench/2.png" alt="OmniGenomeBench Image 2">
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/OmniGenomeBench/3.png" alt="OmniGenomeBench Image 3">
+                    </figure>
+                </div>
+
+                <div class="content" style="font-size: large">
+                    <p><strong>OmniGenomeBench</strong> is a large-scale in-silico benchmarking framework for genomic
+                        foundation models (GFMs). It addresses key challenges such as the lack of benchmarking tools and
+                        open-source software for genomic modeling. OmniGenomeBench integrates millions of genomic
+                        sequences
+                        across hundreds of tasks, providing a standardized and automated benchmarking suite for diverse
+                        GFMs.</p>
+                    <p>In addition to benchmarking, it offers user-friendly interfaces and tutorials for automating
+                        complex
+                        genomic tasks like RNA design and structure prediction. The framework also includes a public
+                        leaderboard to track benchmarking performance.</p>
+
+                    <p><a href="https://github.com/yangheng95/OmniGenomeBench" target="_blank" class="button is-link">View
+                        on GitHub</a></p>
+
+                    <div class="tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">Genomics</span>
+                        <span class="tag">Benchmarking</span>
+                        <span class="tag">RNA</span>
+                        <span class="tag">Open-source</span></div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal for PyABSA -->
+    <div id="project-2-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">PyABSA</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="project-2-modal-carousel" class="carousel">
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/PyABSA/1.png" alt="PyABSA Image 1">
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/PyABSA/2.png" alt="PyABSA Image 2">
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="img/carousel/PyABSA/3.png" alt="PyABSA Image 3">
+                    </figure>
+                </div>
+
+                <div class="content" style="font-size: large">
+                    <p><strong>PyABSA</strong> is a modularized framework designed for Aspect-Based Sentiment Analysis
+                        (ABSA). It simplifies the process of deploying state-of-the-art models for ABSA tasks, including
+                        aspect term extraction and sentiment classification.</p>
+                    <p>PyABSA offers a flexible interface that enables users to fine-tune models, conduct ABSA research,
+                        and
+                        deploy them in production. It includes pre-trained models and datasets to ease reproducibility
+                        and
+                        benchmarking. With integrations like Hugging Face and TensorFlow, PyABSA is accessible to
+                        researchers and developers in various domains.</p>
+
+                    <p><a href="https://github.com/yangheng95/PyABSA" target="_blank" class="button is-link">View on
+                        GitHub</a></p>
+
+                    <div class="tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Sentiment Analysis</span>
+                        <span class="tag">ABSA</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Open-source</span>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Close</button>
+            </footer>
+        </div>
+    </div>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-code-branch"></i> Other Repositories</h1>
+            <hr/>
+            <div class="content">
+                <ul>
+                    <!--                <li>-->
+                    <!--                    <a href="https://pepy.tech/project/OmniGenome" target="_blank">-->
+                    <!--                        <img src="https://pepy.tech/badge/OmniGenome" alt="OmniGenome Downloads">-->
+                    <!--                    </a>-->
+                    <!--                    <a href="https://github.com/yangheng95/OmniGenome" target="_blank"><strong>OmniGenome</strong></a>: A Comprehensive Toolkit of Genomic Modeling and Benchmarking.-->
+                    <!--                </li>-->
+                    <!--                <li>-->
+                    <!--                    <a href="https://pepy.tech/project/pyabsa" target="_blank">-->
+                    <!--                        <img src="https://pepy.tech/badge/pyabsa" alt="PyABSA Downloads">-->
+                    <!--                    </a>-->
+                    <!--                    <a href="https://github.com/yangheng95/PyABSA" target="_blank"><strong>PyABSA</strong></a>: State-of-the-art models and simplified interface for ABSA.-->
+                    <!--                </li>-->
+                    <li>
+                        <a href="https://pepy.tech/project/findfile" target="_blank">
+                            <img src="https://pepy.tech/badge/findfile" alt="FindFile Downloads">
+                        </a>
+                        <a href="https://github.com/yangheng95/findfile" target="_blank"><strong>FindFile</strong></a>:
+                        A
+                        simple tool to help find your file wherever it locates.
+                    </li>
+                    <li>
+                        <a href="https://pepy.tech/project/metric-visualizer" target="_blank">
+                            <img src="https://pepy.tech/badge/metric-visualizer" alt="Metric-Visualizer Downloads">
+                        </a>
+                        <a href="https://github.com/yangheng95/metric_visualizer"
+                           target="_blank"><strong>Metric-Visualizer</strong></a>: Easily and quickly make academic
+                        plots,
+                        e.g., box and trajectory plots.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-project-diagram"></i> Hugging Face Models</h1>
+            <hr/>
+            <div class="content">
+                <ul>
+                    <li style="position: relative;">
+                        <a href="https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1">DeBERTa-v3 Base ABSA</a> - A
+                        model for aspect-based sentiment analysis (ABSA), trained with over 30k samples for tasks like
+                        sentiment classification.
+                        <br>
+                        <span id="deberta-v3-downloads"
+                              style="position: absolute; right: 0; bottom: 0;">📦 0 downloads/month</span>
+                    </li>
+                    <li style="position: relative;">
+                        <a href="https://huggingface.co/yangheng/PlantRNA-FM">PlantRNA-FM</a> - An interpretable RNA
+                        foundation model specifically designed for exploring functional RNA motifs in plants,
+                        pre-trained on
+                        data from over 1,124 plant species.
+                        <br>
+
+                        <span id="plantrna-downloads"
+                              style="position: absolute; right: 0; bottom: 0;">📦 0 downloads/month</span>
+                    </li>
+                    <li style="position: relative;">
+                        <a href="https://huggingface.co/yangheng/OmniGenome-52M">OmniGenome</a> - A model aimed at
+                        genomic
+                        tasks, part of a larger family of models in the OmniGenome project for biological sequence
+                        modeling.
+                        <br>
+
+                        <span id="omnigenome-downloads"
+                              style="position: absolute; right: 0; bottom: 0;">📦 0 downloads/month</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-comment"></i> Hugging Face Spaces</h1>
+            <hr/>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="https://huggingface.co/spaces/yangheng/PyABSA">PyABSA Demo</a> - An interactive app
+                        where
+                        users can explore aspect-based sentiment analysis capabilities, including demos for sentiment
+                        extraction.
+                    </li>
+                    <li>
+                        <a href="https://huggingface.co/spaces/yangheng/OmniGenomeBench">OmniGenomeBench Demo</a> - A
+                        space
+                        dedicated to benchmarking genomic foundation models, allowing users to evaluate model
+                        performance on
+                        various biological sequences.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to pad numbers to a certain length (e.g., 6 digits)
+        function padNumber(number, length) {
+            return number.toString().padStart(length, ' ');
+        }
+
+        // Fetch Hugging Face Model download data
+        async function fetchModelDownloads(modelId, elementId) {
+            try {
+                const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    const paddedDownloads = padNumber(data.downloads, 8); // Pad to 8 digits
+                    document.getElementById(elementId).textContent = ` ${paddedDownloads} downloads/month 📦`;
+                }
+            } catch (error) {
+                console.error("Error fetching model downloads:", error);
+            }
+        }
+
+        // Call fetch functions for each model and space
+        fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
+        fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
+        fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
+
+    </script>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-graduation-cap"></i> Education</h1>
+            <hr/>
+
+            <!-- PhD in AI/NLP -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <p class="title is-4">University of Exeter, United Kingdom</p>
+                        <p class="subtitle is-6">PhD in AI/NLP -
+                            <time datetime="2021-9">September 2021</time>
+                            -
+                            <time datetime="2025-9">September 2025</time>
+                        </p>
+                    </div>
+                    <div class="content">
+                        PhD student in Computer Science with a specialization in Artificial Intelligence (AI) and
+                        Natural
+                        Language Processing (NLP).
+                        <ul>
+                            <li>Focused research on AI and NLP applications in real-world tasks.</li>
+                            <li>Engaged in academic collaborations and publications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master's in AI/NLP -->
+            <div class="card card-gap">
+                <div class="card-content">
+                    <div class="content">
+                        <p class="title is-4">South China Normal University, China</p>
+                        <p class="subtitle is-6">Master’s in AI/NLP -
+                            <time datetime="2018-9">September 2018</time>
+                            -
+                            <time datetime="2021-6">June 2021</time>
+                        </p>
+                    </div>
+                    <div class="content">
+                        Master's degree in Computer Science focusing on Artificial Intelligence (AI) and Natural
+                        Language
+                        Processing (NLP).
+                        <ul>
+                            <li>Completed thesis on advanced NLP techniques and AI-driven solutions.</li>
+                            <li>Awarded the Chinese National Graduate Scholarship in 2020.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bachelor's in Computer Science -->
+            <div class="card card-gap">
+                <div class="card-content">
+                    <div class="content">
+                        <p class="title is-4">Yangtze University, China</p>
+                        <p class="subtitle is-6">Bachelor’s in Computer Science -
+                            <time datetime="2014-9">September 2014</time>
+                            -
+                            <time datetime="2018-6">June 2018</time>
+                        </p>
+                    </div>
+                    <div class="content">
+                        Bachelor's degree in Computer Science.
+                        <ul>
+                            <li>Graduated as an Outstanding Graduate of Yangtze University in 2018.</li>
+                            <li>Participated in several research projects and programming competitions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-chalkboard-teacher"></i> Academic Service</h1>
+            <hr/>
+            <div class="content">
+                <ul>
+                    <li>
+                        <strong>Reviewer</strong> - <a href="https://aclrollingreview.org">ACL ARR</a>
+                    </li>
+                    <li>
+                        <strong>Reviewer</strong> - <a href="https://2023.emnlp.org">EMNLP</a>
+                    </li>
+                    <li>
+                        <strong>Reviewer</strong> - <a href="https://2023.aclweb.org">ACL</a>
+                    </li>
+                    <li>
+                        <strong>Reviewer</strong> - <a href="https://www.cikm2023.org">CIKM</a>
+                    </li>
+                    <li>
+                        <strong>Reviewer</strong> - <a href="https://www.journals.elsevier.com/knowledge-based-systems">Knowledge-based
+                        Systems</a>
+                    </li>
+                    <li>
+                        <strong>Teaching Assistant for Data Science</strong>
+                    </li>
+                    <li>
+                        <strong>and more ...</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-heart"></i> Community Contribution</h1>
+            <hr/>
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                        <img src="https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true"
+                             alt="yangheng95 GitHub Stats">
+                        <p class="heading">GitHub Stats</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title"><i class="fas fa-envelope"></i> Contact</h1>
+            <p style="font-size: x-large">
+                Please feel free to reach out to me via email or social media. I'm always open to new opportunities and
+                collaborations.
+            </p>
+            <br>
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="mailto:hy345@exeter.ac.uk" class="icon is-large">
+                            <i class="fas fa-2x fa-envelope"></i>
+                        </a>
+                        <p class="heading"><a href="mailto:hy345@exeter.ac.uk">hy345[at]exeter.ac.uk</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://github.com/yangheng95" class="icon is-large">
+                            <i class="fab fa-2x fa-github"></i>
+                        </a>
+                        <p class="heading"><a href="https://github.com/yangheng95">GitHub</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://www.linkedin.com/in/heng-yang-3b6278243" class="icon is-large">
+                            <i class="fab fa-2x fa-linkedin-in"></i>
+                        </a>
+                        <p class="heading"><a href="https://www.linkedin.com/in/heng-yang-3b6278243">linkedin</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://huggingface.co/yangheng" class="icon is-large">
+                            <i class="fas fa-2x fa-brain"></i>
+                        </a>
+                        <p class="heading"><a href="https://huggingface.co/yangheng">huggingface</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en" class="icon is-large">
+                            <i class="fas fa-2x fa-graduation-cap"></i>
+                        </a>
+                        <p class="heading"><a href="https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en">Google
+                            Scholar</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://dblp.org/pid/83/415-8.html" class="icon is-large">
+                            <i class="fas fa-2x fa-database"></i>
+                        </a>
+                        <p class="heading"><a href="https://dblp.org/pid/83/415-8.html">DBLP</a></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <a href="https://aclanthology.org/people/h/heng-yang" class="icon is-large">
+                            <i class="fas fa-2x fa-book"></i>
+                        </a>
+                        <p class="heading"><a href="https://aclanthology.org/people/h/heng-yang">ACL Anthology</a></p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+</div>
