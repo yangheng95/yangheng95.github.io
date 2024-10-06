@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Heng Yang - Personal Website</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="favicon.jpg" rel="icon" type="image/x-icon">
-    <link href="css/main.bundle.css" rel="stylesheet">
+    <link href="/favicon.jpg" rel="icon" type="image/x-icon">
+    <link href="/css/main.bundle.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
     <style>
         /* Tabs styling */
@@ -87,7 +88,10 @@
         }
     </style>
 </head>
+
+<body>
 <div id="header"></div>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -95,26 +99,17 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
-                // Re-evaluate the script tag if FontAwesome is included in the header
-                const fontAwesomeScript = document.querySelector('script[src*="fontawesome"]');
-                if (!fontAwesomeScript) {
-                    const faScript = document.createElement('script');
-                    faScript.src = "https://kit.fontawesome.com/4e5a72c756.js";
-                    faScript.crossOrigin = "anonymous";
-                    document.head.appendChild(faScript);
-                }
             })
             .catch(error => console.error('Error loading header:', error));
     });
 </script>
-<body>
 
 <!-- Tabs Navigation -->
 <div class="tabs">
-    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
+    <button class="tablink" onclick="openTab(event, 'about')">About Me</button>
     <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
     <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
-    <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
+    <button class="tablink active" onclick="openTab(event, 'blogs')">Blogs</button>
 </div>
 
 <!-- Tab Content Placeholders -->
@@ -134,6 +129,101 @@
     <!-- Content will be loaded here -->
 </div>
 
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Understanding Genomic Foundation Models: OmniGenome</h1>
+        <p><strong>Published on:</strong> October 6, 2024</p>
+        <p><strong>Author:</strong> Heng Yang, University of Exeter</p>
+        <hr>
+
+        <h2 class="subtitle">Introduction</h2>
+        <p>
+            The alignment of RNA sequences and secondary structures has remained a significant challenge in genomic
+            foundation models (GFMs).
+            Existing models have struggled with creating a meaningful sequence-structure alignment, limiting their
+            ability to handle tasks like RNA design
+            or secondary structure prediction efficiently. <strong>OmniGenome</strong> proposes a novel approach to
+            address this, introducing a flexible modelling
+            paradigm capable of bidirectional mapping between RNA sequences and structures.
+        </p>
+        <p>
+            In this blog, I will walk you through the key contributions of OmniGenome, as highlighted in the <a
+                href="https://arxiv.org/html/2407.11242v2">research paper</a>.
+        </p>
+
+        <h2 class="subtitle">Key Contributions</h2>
+        <h3>1. Sequence-Structure Alignment</h3>
+        <p>
+            At its core, OmniGenome enables bidirectional information flow between RNA sequences and their secondary
+            structures. This sequence-structure alignment
+            allows models to map sequences to structures (Seq2Str) and vice versa (Str2Seq). Unlike existing FMs that
+            overlook this alignment, OmniGenome supports both directions,
+            improving predictive capabilities for tasks like RNA design.
+        </p>
+
+        <h3>2. Versatile Input and Output Modalities</h3>
+        <p>
+            OmniGenome introduces flexible input/output modalities, allowing it to handle both sequences and structures
+            in various configurations. Whether the model
+            is given only sequences, only structures, or a combination of both, it adapts to the context. This
+            versatility allows OmniGenome to be used across a wide range of genomic tasks.
+        </p>
+
+        <h3>3. Case Study: RNA Design and Zero-shot Prediction</h3>
+        <p>
+            OmniGenome demonstrates its effectiveness through two key tasks:
+        <ul>
+            <li><strong>RNA Design (Str2Seq Mapping):</strong> OmniGenome significantly outperforms state-of-the-art
+                models in RNA design tasks. On the EternaV2 benchmark,
+                OmniGenome solved 74% of the puzzles, compared to just 3% by other models like RNA-FM and RNA-MSM.
+            </li>
+            <li><strong>Zero-shot Secondary Structure Prediction (Seq2Str Mapping):</strong> In zero-shot prediction
+                tasks, OmniGenome achieved a macro-F1 score of 74.85%,
+                outperforming both fine-tuned FMs and bioinformatics methods like ViennaRNA.
+            </li>
+        </ul>
+        </p>
+
+        <h3>4. Large-scale Benchmarks</h3>
+        <p>
+            The researchers created a suite of benchmarks to evaluate OmniGenome across a variety of genome tasks,
+            including RNA genomics and DNA sequence understanding. OmniGenome
+            consistently performed better than baseline models, even without any specific training on DNA genomes.
+        </p>
+
+        <h2 class="subtitle">Methodology</h2>
+        <p>
+            OmniGenome's architecture is based on a Transformer encoder, with bidirectional multi-head attention. It
+            includes two variants:
+        <ul>
+            <li><strong>OmniGenome52M</strong> with 52 million parameters.</li>
+            <li><strong>OmniGenome186M</strong> with 186 million parameters.</li>
+        </ul>
+        </p>
+        <p>
+            Pre-training was conducted on large-scale RNA data from the OneKP initiative, which includes over a thousand
+            plant species. OmniGenome utilizes single nucleotide tokenization
+            (SNT) to enable precise sequence-structure alignment.
+        </p>
+
+        <h2 class="subtitle">Open-source Contributions</h2>
+        <p>
+            The OmniGenome framework is open-source, providing tutorials for pre-training, fine-tuning, and genome
+            benchmark evaluations. This transparency ensures that the framework
+            can be further enhanced by the community for diverse genomics tasks. Visit the <a
+                href="https://github.com/yangheng95/OmniGenome">GitHub repository</a> for more details.
+        </p>
+
+        <h2 class="subtitle">Conclusion</h2>
+        <p>
+            OmniGenome represents a significant step forward in RNA genome modelling, addressing the long-standing
+            challenge of sequence-structure alignment. By offering a robust and
+            flexible framework, it opens new possibilities for tasks like RNA design and secondary structure prediction,
+            all while being available as an open-source tool.
+        </p>
+    </div>
+</section>
 
 <section class="section">
     <div class="container">
@@ -197,8 +287,8 @@
         // Add active class to the clicked tab link
         evt.currentTarget.classList.add("active");
 
-        // Load content if not already loaded or if it was cleared
-        if (!tabContentLoaded[tabName] || document.getElementById(tabName).innerHTML === "") {
+        // Load content if not already loaded
+        if (!tabContentLoaded[tabName]) {
             fetch('/pages/' + tabName + '.html')
                 .then(response => response.text())
                 .then(html => {
@@ -214,8 +304,9 @@
 
     // Load the default tab content on page load
     window.onload = function () {
+        // Simulate a click on the default active tab
         document.querySelector('.tablink.active').click();
-    };
+    }
 </script>
 
 </body>

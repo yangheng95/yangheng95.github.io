@@ -1,0 +1,344 @@
+<head>
+    <title>Heng Yang - Personal Website</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/favicon.jpg" rel="icon" type="image/x-icon">
+    <link href="/css/main.bundle.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+    <style>
+        /* Tabs styling */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .tabs button.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .modal-card {
+            max-width: 90vw;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+
+        .modal-card-body {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .carousel {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .carousel-cell {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-cell img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media screen and (min-width: 769px) {
+            .modal-card {
+                max-width: 60vw;
+            }
+
+            .carousel-cell {
+                padding-bottom: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"></div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/pages/header.html')  // Replace 'partials/' with the correct path to your header file
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+
+<!-- Tabs Navigation -->
+<div class="tabs">
+    <button class="tablink" onclick="openTab(event, 'about')">About Me</button>
+    <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
+    <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
+</div>
+
+<!-- Tab Content Placeholders -->
+<div class="tab-content" id="about" >
+    <!-- Content will be loaded here -->
+</div>
+
+<div class="tab-content" id="blogs">
+    <!-- Content will be loaded here -->
+</div>
+
+<div class="tab-content" id="projects">
+    <!-- Content will be loaded here -->
+</div>
+
+<div class="tab-content" id="experience">
+    <!-- Content will be loaded here -->
+</div>
+
+<div id="blog">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation
+                Models</h1>
+            <p><strong>Published on:</strong> October 6, 2024</p>
+            <p><strong>Authors:</strong> Heng Yang and Ke Li, University of Exeter</p>
+            <hr>
+
+            <h2 class="subtitle">Introduction</h2>
+            <p>RNA sequences and their secondary structures play crucial roles in biological processes, yet existing
+                genomic
+                foundation models (FMs) have failed to properly align sequences with structures. OmniGenome aims to
+                address this
+                issue by enabling bidirectional mappings between RNA sequences and secondary structures. The model
+                introduces a
+                flexible paradigm to facilitate RNA design and secondary structure prediction with improved performance
+                across
+                diverse tasks.</p>
+
+            <!-- Placeholder for figure from paper illustrating bidirectional mapping -->
+            <figure>
+                <img alt="Bidirectional RNA Sequence and Structure Mapping" src="/pages/blogs/OmniGenome/images/f1.png">
+                <figcaption>Figure 1: An example of RNA sequence-structure alignment from the paper.</figcaption>
+            </figure>
+
+            <h2 class="subtitle">Sequence-Structure Alignment in Foundation Models</h2>
+            <p>The main challenge addressed by OmniGenome is the lack of alignment between RNA nucleotide sequences and
+                their
+                folded structures in current models. This alignment is essential because it allows genomic information
+                to flow
+                freely between sequences and structures. Existing models, like RNA-FM and RNA-MSM, fail to solve most
+                RNA design
+                tasks because they overlook this critical alignment. OmniGenome introduces sequence-structure alignment
+                to
+                resolve this limitation.</p>
+
+            <!-- Placeholder for comparison of existing models and OmniGenome's performance -->
+            <figure>
+                <img alt="Comparison of models on RNA design tasks" src="/pages/blogs/OmniGenome/images/f2.png">
+                <figcaption>Figure 2: Performance of OmniGenome vs. other models in RNA design tasks.</figcaption>
+            </figure>
+
+            <h3>Str2Seq and Seq2Str Mappings</h3>
+            <p>OmniGenome supports two main mapping tasks:</p>
+            <ul>
+                <li><strong>Str2Seq (Structure to Sequence Mapping):</strong> OmniGenome predicts RNA sequences from
+                    given
+                    structures, significantly improving performance on tasks like RNA design.
+                </li>
+                <li><strong>Seq2Str (Sequence to Structure Mapping):</strong> It also predicts the secondary structure
+                    of RNA
+                    sequences with greater accuracy than traditional models.
+                </li>
+            </ul>
+            <p>This bidirectional mapping capability enhances OmniGenome's utility for a wide range of genome modelling
+                tasks.</p>
+
+            <!-- Placeholder for structure-to-sequence reconstruction workflow -->
+            <figure>
+                <img alt="Structure-Contextualized Sequence Reconstruction" src="/pages/blogs/OmniGenome/images/f3.png">
+                <figcaption>Figure 3: Structure-contextualized sequence reconstruction workflow.</figcaption>
+            </figure>
+
+            <h2 class="subtitle">Methodology</h2>
+            <p>OmniGenome uses a Transformer-based architecture with bidirectional multi-head attention to achieve
+                sequence-structure alignment. Two variants of the model were developed: OmniGenome52M (52 million
+                parameters)
+                and OmniGenome186M (186 million parameters).</p>
+
+            <!-- Placeholder for architecture summary -->
+            <figure>
+                <img alt="OmniGenome Architecture Summary" src="/pages/blogs/OmniGenome/images/f4.png">
+                <figcaption>Figure 4: Architecture of OmniGenome with key specifications.</figcaption>
+            </figure>
+
+            <h3>Pre-training Objectives</h3>
+            <p>The pre-training of OmniGenome is designed around three main objectives:</p>
+            <ul>
+                <li><strong>Str2Seq Loss (L<sub>Str2Seq</sub>):</strong> Trains the model to predict sequence bases from
+                    structure-contextualized inputs.
+                </li>
+                <li><strong>Seq2Str Loss (L<sub>Seq2Str</sub>):</strong> Supervises the prediction of secondary
+                    structures from
+                    sequences.
+                </li>
+                <li><strong>MRLM (Masked RNA Language Modelling):</strong> Aims to improve the model’s understanding of
+                    genomic
+                    language by predicting masked nucleotide bases.
+                </li>
+            </ul>
+
+            <h2 class="subtitle">Results and Evaluation</h2>
+            <p>OmniGenome was evaluated on several benchmarks, demonstrating superior performance across multiple tasks,
+                such as
+                RNA design and zero-shot secondary structure prediction:</p>
+            <ul>
+                <li><strong>RNA Design:</strong> OmniGenome solved 74% of puzzles on the EternaV2 benchmark, compared to
+                    just 3%
+                    solved by RNA-FM.
+                </li>
+                <li><strong>Zero-shot Secondary Structure Prediction:</strong> Achieved a macro-F1 score of 74.85%,
+                    outperforming fine-tuned models and bioinformatics methods like ViennaRNA.
+                </li>
+            </ul>
+
+            <!-- Placeholder for benchmark results -->
+            <figure>
+                <img alt="Benchmark Results" src="/pages/blogs/OmniGenome/images/f5.png">
+                <figcaption>Figure 5: OmniGenome's performance on RNA and DNA benchmarks.</figcaption>
+            </figure>
+
+            <h2 class="subtitle">Conclusion</h2>
+            <p>OmniGenome sets a new standard for genomic foundation models by addressing the challenge of
+                sequence-structure
+                alignment. It outperforms state-of-the-art models in both RNA and DNA modelling tasks, making it a
+                powerful tool
+                for researchers working in genomics.</p>
+
+            <p>For more details, you can access the full research paper on <a
+                    href="https://arxiv.org/html/2407.11242v2">arXiv</a> and explore the open-source OmniGenome toolkit
+                available on <a href="https://github.com/yangheng95/OmniGenome">GitHub</a>.</p>
+        </div>
+    </section>
+</div>
+
+
+<section class="section">
+    <div class="container">
+        <h1 class="title"><i class="fas fa-comment"></i> Comments</h1>
+        <hr/>
+        <div id="utterances-comments"></div>
+    </div>
+
+    <script async
+            crossorigin="anonymous"
+            issue-term="pathname"
+            repo="yangheng95/yangheng95.github.io"
+            src="https://utteranc.es/client.js"
+            theme="github-light">
+    </script>
+</section>
+
+<script src="/js/bundle.js"></script>
+
+<!-- Footer container where footer.html will be loaded -->
+<div id="footer"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/pages/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    });
+</script>
+
+
+<!-- JavaScript to Handle Tab Functionality -->
+<script>
+    // Object to keep track of loaded tab content
+    var tabContentLoaded = {};
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab contents
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove active class from all tab links
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+         window.location.href = '/';
+        // // Clear the content of #blogs if another tab is clicked
+        // if (tabName !== "blogs" || tabName !== "experience" ||
+        //     tabName !== "projects" || tabName !== "about-me"
+        // ) {
+        //     document.getElementById("blog").innerHTML = ""; // Clears blogs content
+        // }
+
+
+        // Show the current tab content
+        document.getElementById(tabName).style.display = "block";
+
+        // Add active class to the clicked tab link
+        evt.currentTarget.classList.add("active");
+
+        // Load content if not already loaded
+        if (!tabContentLoaded[tabName]) {
+            fetch('/pages/' + tabName + '.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(tabName).innerHTML = html;
+                    tabContentLoaded[tabName] = true;
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    document.getElementById(tabName).innerHTML = "<p>Content could not be loaded.</p>";
+                });
+        }
+    }
+
+    // Load the default tab content on page load
+    window.onload = function () {
+        // Simulate a click on the default active tab
+        document.querySelector('.tablink.active').click();
+    };
+</script>

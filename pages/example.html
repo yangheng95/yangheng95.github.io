@@ -5,36 +5,40 @@
 <div id="header"></div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('pages/header.html')  // Replace 'partials/' with the correct path to your header file
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading header:', error));
-  });
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('pages/header.html')  // Replace 'partials/' with the correct path to your header file
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
 </script>
 
 <!-- Tabs Navigation -->
 <div class="tabs">
-    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
-    <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
+    <button class="tablink" onclick="openTab(event, 'about')">About Me</button>
     <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
+    <button class="tablink active" onclick="openTab(event, 'blogs')">Blogs</button>
 </div>
 
 <!-- Tab Content Placeholders -->
-<div id="about" class="tab-content">
+<div class="tab-content" id="about">
     <!-- Content will be loaded here -->
 </div>
 
-<div id="blogs" class="tab-content">
+<div class="tab-content" id="blogs">
     <!-- Content will be loaded here -->
 </div>
 
-<div id="projects" class="tab-content">
+<div class="tab-content" id="projects">
     <!-- Content will be loaded here -->
 </div>
 
+<div class="tab-content" id="experience">
+    <!-- Content will be loaded here -->
+</div>
 
 
 <section class="section">
@@ -44,33 +48,33 @@
         <div id="utterances-comments"></div>
     </div>
 
-    <script src="https://utteranc.es/client.js"
-            repo="yangheng95/yangheng95.github.io"
-            issue-term="pathname"
-            theme="github-light"
+    <script async
             crossorigin="anonymous"
-            async>
+            issue-term="pathname"
+            repo="yangheng95/yangheng95.github.io"
+            src="https://utteranc.es/client.js"
+            theme="github-light">
     </script>
 </section>
 
 <script src="js/bundle.js"></script>
 
 <!-- Footer container where footer.html will be loaded -->
-  <div id="footer"></div>
+<div id="footer"></div>
 
-  <script>
+<script>
     // JavaScript to load footer.html into the placeholder div
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('pages/' + 'footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => {
-          console.error('Error loading footer:', error);
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/pages/' + 'footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
     });
-  </script>
+</script>
 
 
 <!-- JavaScript to Handle Tab Functionality -->
@@ -99,9 +103,16 @@
         // Add active class to the clicked tab link
         evt.currentTarget.classList.add("active");
 
+        // // Clear the content of #blogs if another tab is clicked
+        // if (tabName !== "blogs" || tabName !== "experience" ||
+        //      tabName !== "projects" ||  tabName !== "about-me"
+        // ) {
+        //     document.getElementById("blogs").innerHTML = ""; // Clears blogs content
+        // }
+
         // Load content if not already loaded
         if (!tabContentLoaded[tabName]) {
-            fetch('pages/' + tabName + '.html')
+            fetch('/pages/' + tabName + '.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById(tabName).innerHTML = html;
@@ -112,10 +123,11 @@
                     document.getElementById(tabName).innerHTML = "<p>Content could not be loaded.</p>";
                 });
         }
+
     }
 
     // Load the default tab content on page load
-    window.onload = function() {
+    window.onload = function () {
         // Simulate a click on the default active tab
         document.querySelector('.tablink.active').click();
     }

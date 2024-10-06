@@ -1,135 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Heng Yang - Profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.bundle.css">
-    <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-    <style>
-        /* Tabs styling */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .tabs button {
-            background-color: #f1f1f1;
-            border: none;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-
-        .tabs button.active {
-            background-color: #04AA6D;
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .container {
-            padding: 20px;
-        }
-        .modal-card {
-            max-width: 90vw;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            max-height: 90vh;
-        }
-
-        .modal-card-body {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 1rem;
-        }
-
-        .carousel {
-            margin: 0 auto;
-            max-width: 100%;
-        }
-
-        .carousel-cell {
-            width: 100%;
-            height: 0;
-            padding-bottom: 75%;
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .carousel-cell img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        @media screen and (min-width: 769px) {
-            .modal-card {
-                max-width: 60vw;
-            }
-
-            .carousel-cell {
-                padding-bottom: 60%;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <div class="navbar-item is-hidden-desktop">
-            <a href="https://github.com/yangheng95" class="icon is-large has-text-light">
-                <i class="fab fa-2x fa-github"></i>
-            </a>
-        </div>
-        <div class="navbar-item is-hidden-desktop">
-            <a href="https://yangheng95.github.io/" class="icon is-large has-text-light">
-                <i class="fas fa-2x fa-globe"></i>
-            </a>
-        </div>
-    </div>
-    <div class="navbar-menu">
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <a href="https://github.com/yangheng95" class="icon is-large has-text-light">
-                    <i class="fab fa-2x fa-github"></i>
-                </a>
-            </div>
-            <div class="navbar-item">
-                <a href="https://github.com/yangheng95" class="icon is-large has-text-light">
-                    <i class="fas fa-2x fa-globe"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-
-
-
-<section class="hero is-primary">
+<section class="hero is-primary"
+         style="background-image: url('/img/gray_bg.jpg'); background-size: cover; background-position: center;">
     <div class="hero-body">
-        <div class="container">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
             <!-- Avatar Section -->
             <div class="level">
                 <div class="level-item has-text-centered">
                     <figure class="image is-128x128">
-                        <img class="is-rounded" src="img/avatar.jpg" alt="Portrait of Heng Yang">
+                        <img alt="Portrait of Heng Yang" class="is-rounded" src="/img/avatar.jpg">
                     </figure>
                 </div>
             </div>
@@ -138,8 +15,7 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column">
                     <h1 class="title is-1 is-size-3-mobile">Heng Yang</h1> <!-- Adjusted for mobile -->
-                    <a href="docs/resume.pdf" class="icon has-text-light"
-                       style="white-space: nowrap;font-size: large">
+                    <a class="icon has-text-light" href="/docs/resume.pdf" style="white-space: nowrap;font-size: large">
                         <i class="fas fa-file-pdf"></i> <strong>View My Resume</strong>
                     </a>
                     <br><br>
@@ -155,7 +31,7 @@
         <div class="columns is-mobile is-multiline is-centered has-text-centered"
              style="max-width: 800px; margin: 0 auto;">
             <div class="column is-6-mobile is-3-tablet">
-                <a href="https://github.com/yangheng95" class="icon has-text-light">
+                <a class="icon has-text-light" href="https://github.com/yangheng95">
                     <i class="fab fa-github"></i> <strong>GitHub</strong>
                 </a>
             </div>
@@ -165,22 +41,22 @@
                 </a>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-                <a href="https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en" class="icon has-text-light">
+                <a class="icon has-text-light" href="https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en">
                     <i class="fas fa-graduation-cap"></i> <strong>Scholar</strong>
                 </a>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-                <a href="https://aclanthology.org/people/h/heng-yang" class="icon has-text-light">
+                <a class="icon has-text-light" href="https://aclanthology.org/people/h/heng-yang">
                     <i class="fas fa-book"></i> <strong>ACL Anthology</strong>
                 </a>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-                <a href="https://www.linkedin.com/in/heng-yang-3b6278243" class="icon has-text-light">
+                <a class="icon has-text-light" href="https://www.linkedin.com/in/heng-yang-3b6278243">
                     <i class="fab fa-linkedin"></i> <strong>LinkedIn</strong>
                 </a>
             </div>
             <div class="column is-6-mobile is-3-tablet">
-                <a href="https://dblp.org/pid/83/415-8.html" class="icon has-text-light">
+                <a class="icon has-text-light" href="https://dblp.org/pid/83/415-8.html">
                     <i class="fas fa-database"></i> <strong>DBLP</strong>
                 </a>
             </div>
