@@ -404,31 +404,53 @@
     </section>
 
 
-    <section class="section">
-        <div class="container">
-            <h1 class="title"><i class="fas fa-comment"></i> Hugging Face Spaces</h1>
-            <hr/>
-            <div class="content">
-                <ul>
-                    <li>
-                        <a href="https://huggingface.co/spaces/yangheng/PyABSA">PyABSA Demo</a> - An interactive app
-                        where
-                        users can explore aspect-based sentiment analysis capabilities, including demos for sentiment
-                        extraction.
-                    </li>
-                    <li>
-                        <a href="https://huggingface.co/spaces/yangheng/OmniGenomeBench">OmniGenomeBench Demo</a> - A
-                        space
-                        dedicated to benchmarking genomic foundation models, allowing users to evaluate model
-                        performance on
-                        various biological sequences.
-                    </li>
-                </ul>
-            </div>
+<section class="section">
+    <div class="container">
+        <h1 class="title"><i class="fas fa-comment"></i> Hugging Face Spaces</h1>
+        <hr/>
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="https://huggingface.co/spaces/yangheng/PyABSA">PyABSA Demo</a> - An interactive app where
+                    users can explore aspect-based sentiment analysis capabilities, including demos for sentiment
+                    extraction.
+                </li>
+                <li>
+                    <a href="https://huggingface.co/spaces/yangheng/OmniGenomeBench">OmniGenomeBench Demo</a> - A space
+                    dedicated to benchmarking genomic foundation models, allowing users to evaluate model performance on
+                    various biological sequences.
+                </li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
 
+<script>
+    // Function to pad numbers to a certain length (e.g., 6 digits)
+    function padNumber(number, length) {
+        return number.toString().padStart(length, ' ');
+    }
 
+    // Fetch Hugging Face Model download data
+    async function fetchModelDownloads(modelId, elementId) {
+        try {
+            const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
+            if (response.ok) {
+                const data = await response.json();
+                const paddedDownloads = padNumber(data.downloads, 8); // Pad to 8 digits
+                document.getElementById(elementId).textContent = ` ${paddedDownloads} downloads/month 📦`;
+            }
+        } catch (error) {
+            console.error("Error fetching model downloads:", error);
+        }
+    }
+
+    // Call fetch functions for each model and space
+    fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
+    fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
+    fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
+
+</script>
     <!--    <section class="section">-->
     <!--        <div class="container">-->
     <!--            <h1 class="title"><i class="fas fa-graduation-cap"></i> Education</h1>-->
@@ -625,41 +647,4 @@
         </div>
     </section>
 
-    <script>
-   // Function to pad numbers to a certain length (e.g., 6 digits)
-function padNumber(number, length) {
-    return number.toString().padStart(length, '\u00A0');
-}
-
-// Fetch Hugging Face Model download data
-async function fetchModelDownloads(modelId, elementId) {
-    try {
-        const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
-        if (response.ok) {
-            const data = await response.json();
-            if (data.downloads) {
-                const paddedDownloads = padNumber(data.downloads, 8); // Pad to 8 digits
-                document.getElementById(elementId).textContent = ` ${paddedDownloads} downloads/month 📦`;
-            } else {
-                document.getElementById(elementId).textContent = ` Data not available 📦`;
-            }
-        } else {
-            console.error(`Failed to fetch model downloads: ${response.statusText}`);
-            document.getElementById(elementId).textContent = ` Error fetching data 📦`;
-        }
-    } catch (error) {
-        console.error("Error fetching model downloads:", error);
-        document.getElementById(elementId).textContent = ` Error fetching data 📦`;
-    }
-}
-
-// Fetch downloads on page load
-window.onload = function () {
-    // Call fetch functions for each model
-    fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
-    fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
-    fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
-};
-
-    </script>
 </div>
