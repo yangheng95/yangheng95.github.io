@@ -1,0 +1,121 @@
+
+<div id="header"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('pages/header.html')  // Replace 'partials/' with the correct path to your header file
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+  });
+</script>
+
+
+
+<div id="blog-list" class="tab-content">
+    <div class="container">
+        <h2 class="title">Blogs</h2>
+        <hr/>
+        <!-- Blog entry list -->
+        <div class="content">
+            <ul>
+                <!-- Blog Entry 1 -->
+                <li>
+                    <a href="blog1.html" class="has-text-link">
+                        <strong>Understanding Genomic Foundation Models: OmniGenomeBench</strong>
+                    </a>
+                    <br>
+                    <small>Published on: October 1, 2024</small>
+                    <p>
+                        In this blog, we dive into the OmniGenomeBench framework, which automates large-scale in-silico benchmarking for Genomic Foundation Models (GFMs)...
+                        <a href="blog1.html">Read more</a>
+                    </p>
+                </li>
+
+                <!-- Blog Entry 2 -->
+                <li>
+                    <a href="blog2.html" class="has-text-link">
+                        <strong>Advancements in Adversarial Attacks in NLP</strong>
+                    </a>
+                    <br>
+                    <small>Published on: September 15, 2024</small>
+                    <p>
+                        This post covers the latest advancements in defending against adversarial attacks in Natural Language Processing and how we are leveraging these techniques in our work...
+                        <a href="blog2.html">Read more</a>
+                    </p>
+                </li>
+
+                <!-- Blog Entry 3 -->
+                <li>
+                    <a href="blog3.html" class="has-text-link">
+                        <strong>Exploring Sentiment Analysis at Scale: PyABSA</strong>
+                    </a>
+                    <br>
+                    <small>Published on: August 29, 2024</small>
+                    <p>
+                        In this blog, we discuss the PyABSA project and its applications in large-scale aspect-based sentiment analysis tasks...
+                        <a href="blog3.html">Read more</a>
+                    </p>
+                </li>
+
+                <!-- More Blog Entries -->
+                <!-- Add more blogs here in similar format -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/bundle.js"></script>
+
+
+<!-- JavaScript to Handle Tab Functionality -->
+<script>
+    // Object to keep track of loaded tab content
+    var tabContentLoaded = {};
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab contents
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove active class from all tab links
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+        // Show the current tab content
+        document.getElementById(tabName).style.display = "block";
+
+        // Add active class to the clicked tab link
+        evt.currentTarget.classList.add("active");
+
+        // Load content if not already loaded
+        if (!tabContentLoaded[tabName]) {
+            fetch('pages/' + tabName + '.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(tabName).innerHTML = html;
+                    tabContentLoaded[tabName] = true;
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    document.getElementById(tabName).innerHTML = "<p>Content could not be loaded.</p>";
+                });
+        }
+    }
+
+    // Load the default tab content on page load
+    window.onload = function() {
+        // Simulate a click on the default active tab
+        document.querySelector('.tablink.active').click();
+    }
+</script>
