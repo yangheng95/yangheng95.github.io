@@ -121,21 +121,6 @@
         </div>
     </section>
 
-    <script>
-        function togglePublications() {
-            var morePublications = document.getElementById("morePublications");
-            var toggleButton = document.getElementById("toggleButton");
-
-            if (morePublications.style.display === "none") {
-                morePublications.style.display = "block";
-                toggleButton.innerHTML = "Show Less";
-            } else {
-                morePublications.style.display = "none";
-                toggleButton.innerHTML = "Show More";
-            }
-        }
-    </script>
-
     <section class="section">
         <div class="container">
             <h1 class="title"><i class="fas fa-laptop-code"></i> Open-source Projects</h1>
@@ -425,32 +410,6 @@
     </div>
 </section>
 
-<script>
-    // Function to pad numbers to a certain length (e.g., 6 digits)
-    function padNumber(number, length) {
-        return number.toString().padStart(length, ' ');
-    }
-
-    // Fetch Hugging Face Model download data
-    async function fetchModelDownloads(modelId, elementId) {
-        try {
-            const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
-            if (response.ok) {
-                const data = await response.json();
-                const paddedDownloads = padNumber(data.downloads, 8); // Pad to 8 digits
-                document.getElementById(elementId).textContent = ` ${paddedDownloads} downloads/month 📦`;
-            }
-        } catch (error) {
-            console.error("Error fetching model downloads:", error);
-        }
-    }
-
-    // Call fetch functions for each model and space
-    fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
-    fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
-    fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
-
-</script>
     <!--    <section class="section">-->
     <!--        <div class="container">-->
     <!--            <h1 class="title"><i class="fas fa-graduation-cap"></i> Education</h1>-->
