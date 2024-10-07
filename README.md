@@ -34,24 +34,28 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 
 -
     *
+
 *[OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models](https://arxiv.org/abs/2410.01784)
 **  
 *Heng Yang*, Jack Cole, Ke Li | Arxiv 2024
 
 -
     *
+
 *[OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation Models](https://arxiv.org/abs/2407.11242)
 **  
 *Heng Yang*, Ke Li | Arxiv 2024
 
 -
     *
+
 *[The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples](https://openreview.net/forum?id=gLcpCzxoiM)
 **  
 *Heng Yang*, Ke Li | EMNLP 2024
 
 -
     *
+
 *[MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction](https://openreview.net/forum?id=2ewzfedbQv)
 **  
 *Heng Yang*, Ke Li | EMNLP 2024
@@ -62,12 +66,14 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 
 -
     *
+
 *[PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis](https://dl.acm.org/doi/abs/10.1145/3583780.3614752)
 **  
 *Heng Yang*, Cheng Zhang, Ke Li | CIKM 2023
 
 -
     *
+
 *[InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators](https://aclanthology.org/2023.findings-emnlp.907)
 **  
 *Heng Yang*, Ke Li | EMNLP 2023
@@ -78,12 +84,14 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 
 -
     *
+
 *[DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls](https://ieeexplore.ieee.org/document/10372386)
 **  
 Ke Li, *Heng Yang* | IEEE TSE, 2023
 
 -
     *
+
 *[A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction](https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534)
 **  
 *Heng Yang*, Biqing Zeng, et al. | Neurocomputing, 2021

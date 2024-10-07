@@ -111,8 +111,8 @@
 
 <!-- Tabs Navigation -->
 <div class="tabs">
-    <button class="tablink " onclick="openTab(event, 'about')">About Me</button>
-    <button class="tablink active" onclick="openTab(event, 'omnigenomebench')">OmniGenomeBench</button>
+    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
+    <button class="tablink" onclick="openTab(event, 'omnigenomebench')">OmniGenomeBench</button>
     <button class="tablink" onclick="openTab(event, 'pyabsa')">PyABSA</button>
     <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
     <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
@@ -226,12 +226,13 @@
             const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
             if (response.ok) {
                 const data = await response.json();
-                document.getElementById(elementId).textContent =  ` ${data.downloads} downloads/month  `;
+                document.getElementById(elementId).textContent = ` ${data.downloads} downloads/month  `;
             }
         } catch (error) {
             console.error("Error fetching model downloads:", error);
         }
     }
+
     // Load the default tab content on page load
     window.onload = function () {
         document.querySelector('.tablink.active').click();
@@ -239,6 +240,21 @@
         fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
         fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
     };
+</script>
+
+<script>
+    function togglePublications() {
+        var morePublications = document.getElementById("morePublications");
+        var toggleButton = document.getElementById("toggleButton");
+
+        if (morePublications.style.display === "none") {
+            morePublications.style.display = "block";
+            toggleButton.innerHTML = "Show Less";
+        } else {
+            morePublications.style.display = "none";
+            toggleButton.innerHTML = "Show More";
+        }
+    }
 </script>
 
 </body>
