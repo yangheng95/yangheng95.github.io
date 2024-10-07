@@ -101,16 +101,18 @@
     });
 </script>
 
+
 <!-- Tabs Navigation -->
 <div class="tabs">
-    <button class="tablink" onclick="openTab(event, 'about')">About Me</button>
-    <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
+    <button class="tablink" onclick="openTab(event, 'omnigenomebench')">OmniGenomeBench</button>
+    <button class="tablink" onclick="openTab(event, 'pyabsa')">PyABSA</button>
     <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
     <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
 </div>
 
 <!-- Tab Content Placeholders -->
-<div class="tab-content" id="about" >
+<div class="tab-content" id="about">
     <!-- Content will be loaded here -->
 </div>
 
@@ -118,7 +120,11 @@
     <!-- Content will be loaded here -->
 </div>
 
-<div class="tab-content" id="projects">
+<div class="tab-content" id="omnigenomebench">
+    <!-- Content will be loaded here -->
+</div>
+
+<div class="tab-content" id="pyabsa">
     <!-- Content will be loaded here -->
 </div>
 
@@ -134,9 +140,8 @@
             <p><strong>Published on:</strong> October 6, 2024</p>
             <p><strong>Authors:</strong> Heng Yang and Ke Li, University of Exeter</p>
             <hr>
-            <br>
-            <br>
-            <h2 class="title">Introduction</h2>
+
+            <h2 class="subtitle">Introduction</h2>
             <p>RNA sequences and their secondary structures play crucial roles in biological processes, yet existing
                 genomic
                 foundation models (FMs) have failed to properly align sequences with structures. OmniGenome aims to
@@ -152,14 +157,17 @@
                 <img alt="Bidirectional RNA Sequence and Structure Mapping" src="/pages/blogs/OmniGenome/images/f1.png">
                 <figcaption>Figure 1: An example of RNA sequence-structure alignment from the paper.</figcaption>
             </figure>
-            <br>
-            <br>
-            <h2 class="title">Sequence-Structure Alignment in Foundation Models</h2>
+
+            <h2 class="subtitle">Sequence-Structure Alignment in Foundation Models</h2>
             <p>The main challenge addressed by OmniGenome is the lack of alignment between RNA nucleotide sequences and
-                their folded structures in current models. This alignment is essential because it allows genomic information
-                to flow freely between sequences and structures. Existing models, like RNA-FM and RNA-MSM, fail to solve most
-                RNA design tasks because they overlook this critical alignment. OmniGenome introduces sequence-structure alignment
-                to resolve this limitation.</p>
+                their
+                folded structures in current models. This alignment is essential because it allows genomic information
+                to flow
+                freely between sequences and structures. Existing models, like RNA-FM and RNA-MSM, fail to solve most
+                RNA design
+                tasks because they overlook this critical alignment. OmniGenome introduces sequence-structure alignment
+                to
+                resolve this limitation.</p>
 
             <!-- Placeholder for comparison of existing models and OmniGenome's performance -->
             <figure>
@@ -170,10 +178,12 @@
             <h3>Str2Seq and Seq2Str Mappings</h3>
             <p>OmniGenome supports two main mapping tasks:</p>
             <ul>
-                <li><strong>Str2Seq (Structure to Sequence Mapping):</strong> OmniGenome predicts RNA sequences from given
+                <li><strong>Str2Seq (Structure to Sequence Mapping):</strong> OmniGenome predicts RNA sequences from
+                    given
                     structures, significantly improving performance on tasks like RNA design.
                 </li>
-                <li><strong>Seq2Str (Sequence to Structure Mapping):</strong> It also predicts the secondary structure of RNA
+                <li><strong>Seq2Str (Sequence to Structure Mapping):</strong> It also predicts the secondary structure
+                    of RNA
                     sequences with greater accuracy than traditional models.
                 </li>
             </ul>
@@ -185,11 +195,11 @@
                 <img alt="Structure-Contextualized Sequence Reconstruction" src="/pages/blogs/OmniGenome/images/f3.png">
                 <figcaption>Figure 3: Structure-contextualized sequence reconstruction workflow.</figcaption>
             </figure>
-            <br>
-            <br>
-            <h2 class="title">Methodology</h2>
+
+            <h2 class="subtitle">Methodology</h2>
             <p>OmniGenome uses a Transformer-based architecture with bidirectional multi-head attention to achieve
-                sequence-structure alignment. Two variants of the model were developed: OmniGenome52M (52 million parameters)
+                sequence-structure alignment. Two variants of the model were developed: OmniGenome52M (52 million
+                parameters)
                 and OmniGenome186M (186 million parameters).</p>
 
             <!-- Placeholder for architecture summary -->
@@ -205,20 +215,23 @@
                     structure-contextualized inputs.
                 </li>
                 <li><strong>Seq2Str Loss (L<sub>Seq2Str</sub>):</strong> Supervises the prediction of secondary
-                    structures from sequences.
+                    structures from
+                    sequences.
                 </li>
                 <li><strong>MRLM (Masked RNA Language Modelling):</strong> Aims to improve the model’s understanding of
-                    genomic language by predicting masked nucleotide bases.
+                    genomic
+                    language by predicting masked nucleotide bases.
                 </li>
             </ul>
-            <br>
-            <br>
-            <h2 class="title">Results and Evaluation</h2>
+
+            <h2 class="subtitle">Results and Evaluation</h2>
             <p>OmniGenome was evaluated on several benchmarks, demonstrating superior performance across multiple tasks,
-                such as RNA design and zero-shot secondary structure prediction:</p>
+                such as
+                RNA design and zero-shot secondary structure prediction:</p>
             <ul>
                 <li><strong>RNA Design:</strong> OmniGenome solved 74% of puzzles on the EternaV2 benchmark, compared to
-                    just 3% solved by RNA-FM.
+                    just 3%
+                    solved by RNA-FM.
                 </li>
                 <li><strong>Zero-shot Secondary Structure Prediction:</strong> Achieved a macro-F1 score of 74.85%,
                     outperforming fine-tuned models and bioinformatics methods like ViennaRNA.
@@ -230,12 +243,14 @@
                 <img alt="Benchmark Results" src="/pages/blogs/OmniGenome/images/f5.png">
                 <figcaption>Figure 5: OmniGenome's performance on RNA and DNA benchmarks.</figcaption>
             </figure>
-            <br>
-            <br>
-            <h2 class="title">Conclusion</h2>
+
+            <h2 class="subtitle">Conclusion</h2>
             <p>OmniGenome sets a new standard for genomic foundation models by addressing the challenge of
-                sequence-structure alignment. It outperforms state-of-the-art models in both RNA and DNA modelling tasks,
-                making it a powerful tool for researchers working in genomics.</p>
+                sequence-structure
+                alignment. It outperforms state-of-the-art models in both RNA and DNA modelling tasks, making it a
+                powerful tool
+                for researchers working in genomics.</p>
+
             <p>For more details, you can access the full research paper on <a
                     href="https://arxiv.org/html/2407.11242v2">arXiv</a> and explore the open-source OmniGenome toolkit
                 available on <a href="https://github.com/yangheng95/OmniGenome">GitHub</a>.</p>

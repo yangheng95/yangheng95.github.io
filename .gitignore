@@ -1,0 +1,50 @@
+.idea
+# python ignores
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+*.log
+*.tmp
+*.tmp.*
+*.swp
+*.bak
+*.cache
+*.db
+*.sqlite3
+*.sql
+
+# OS ignores
+.DS_Store
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Icon?
+
+# IDE ignores
+*.idea
+*.vscode
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs_analysis.dat
+*.ntvs_analysis.dat.lock
+*.sln.docstates
+
+# virtualenv ignores
+venv
+ENV
+env
+env/
+ENV/
+env*
+
+# build ignores
+build
+dist
+*.egg-info
+*.egg
+*.egg-info/
+*.egg/

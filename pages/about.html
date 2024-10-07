@@ -121,6 +121,21 @@
         </div>
     </section>
 
+    <script>
+        function togglePublications() {
+            var morePublications = document.getElementById("morePublications");
+            var toggleButton = document.getElementById("toggleButton");
+
+            if (morePublications.style.display === "none") {
+                morePublications.style.display = "block";
+                toggleButton.innerHTML = "Show Less";
+            } else {
+                morePublications.style.display = "none";
+                toggleButton.innerHTML = "Show More";
+            }
+        }
+    </script>
+
     <section class="section">
         <div class="container">
             <h1 class="title"><i class="fas fa-laptop-code"></i> Open-source Projects</h1>
@@ -128,7 +143,7 @@
             <div class="tile is-ancestor">
                 <div class="tile is-vertical is-12">
                     <div class="tile">
-                        <!-- OmniGenomeBench Project -->
+                        <!-- omnigenomebench Project -->
                         <div class="tile is-parent">
                             <article class="tile is-child notification is-flex is-flex-direction-column">
                                 <div class="content is-flex-grow-1">
@@ -138,7 +153,7 @@
                                     <figure class="image is-3by2">
                                         <img alt="OmniGenomeBench" class="modal-trigger"
                                              data-target="project-1-modal"
-                                             src="/pages/projects/OmniGenomeBench/OmniGenomeBench.png">
+                                             src="/pages/OmniGenomeBench/OmniGenomeBench.png">
                                     </figure>
                                     <p>OmniGenomeBench is a large-scale in-silico benchmarking framework for genomic
                                         foundation models (GFMs). It addresses the lack of standardized tools for
@@ -165,7 +180,7 @@
                             </article>
                         </div>
 
-                        <!-- PyABSA Project -->
+                        <!-- pyabsa Project -->
                         <div class="tile is-parent">
                             <article class="tile is-child notification is-flex is-flex-direction-column">
                                 <div class="content is-flex-grow-1">
@@ -175,7 +190,7 @@
                                     <figure class="image is-4by3">
                                         <img alt="PyABSA" class="modal-trigger"
                                              data-target="project-2-modal"
-                                             src="/pages/projects/PyABSA/PyABSA.png">
+                                             src="/pages/PyABSA/PyABSA.png">
                                     </figure>
                                     <p>PyABSA (Aspect-Based Sentiment Analysis) is a modularized framework designed to
                                         simplify the implementation of sentiment analysis tasks. It offers pre-trained
@@ -207,7 +222,7 @@
         </div>
     </section>
 
-    <!-- Modal for OmniGenomeBench -->
+    <!-- Modal for omnigenomebench -->
     <div class="modal" id="project-1-modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -218,27 +233,25 @@
             <section class="modal-card-body">
                 <div class="carousel" id="project-1-modal-carousel">
                     <figure class="carousel-cell">
-                        <img alt="OmniGenomeBench Image 1" src="/pages/projects/OmniGenomeBench/1.png">
+                        <img alt="OmniGenomeBench Image 1" src="/pages/OmniGenomeBench/1.png">
                     </figure>
                     <figure class="carousel-cell">
-                        <img alt="OmniGenomeBench Image 2" src="/pages/projects/OmniGenomeBench/2.png">
+                        <img alt="OmniGenomeBench Image 2" src="/pages/OmniGenomeBench/2.png">
                     </figure>
                     <figure class="carousel-cell">
-                        <img alt="OmniGenomeBench Image 3" src="/pages/projects/OmniGenomeBench/3.png">
+                        <img alt="OmniGenomeBench Image 3" src="/pages/OmniGenomeBench/3.png">
                     </figure>
                 </div>
 
                 <div class="content" style="font-size: large">
                     <p><strong>OmniGenomeBench</strong> is a large-scale in-silico benchmarking framework for genomic
-                        foundation models (GFMs). It addresses key challenges such as the lack of benchmarking tools and
-                        open-source software for genomic modeling. OmniGenomeBench integrates millions of genomic
-                        sequences
-                        across hundreds of tasks, providing a standardized and automated benchmarking suite for diverse
-                        GFMs.</p>
+                        foundation models (GFMs). It addresses key challenges such as the lack of benchmarking tools
+                        and open-source software for genomic modeling. OmniGenomeBench integrates millions of genomic
+                        sequences across hundreds of tasks, providing a standardized and automated benchmarking suite
+                        for diverse GFMs.</p>
                     <p>In addition to benchmarking, it offers user-friendly interfaces and tutorials for automating
-                        complex
-                        genomic tasks like RNA design and structure prediction. The framework also includes a public
-                        leaderboard to track benchmarking performance.</p>
+                        complex genomic tasks like RNA design and structure prediction. The framework also includes
+                        a public leaderboard to track benchmarking performance.</p>
 
                     <p><a class="button is-link" href="https://github.com/yangheng95/OmniGenomeBench" target="_blank">View
                         on GitHub</a></p>
@@ -257,7 +270,7 @@
         </div>
     </div>
 
-    <!-- Modal for PyABSA -->
+    <!-- Modal for pyabsa -->
     <div class="modal" id="project-2-modal">
         <div class="modal-background"></div>
         <div class="modal-card">
@@ -268,13 +281,13 @@
             <section class="modal-card-body">
                 <div class="carousel" id="project-2-modal-carousel">
                     <figure class="carousel-cell">
-                        <img alt="PyABSA Image 1" src="/pages/projects/PyABSA/1.png">
+                        <img alt="PyABSA Image 1" src="/pages/PyABSA/1.png">
                     </figure>
                     <figure class="carousel-cell">
-                        <img alt="PyABSA Image 2" src="/pages/projects/PyABSA/2.png">
+                        <img alt="PyABSA Image 2" src="/pages/PyABSA/2.png">
                     </figure>
                     <figure class="carousel-cell">
-                        <img alt="PyABSA Image 3" src="/pages/projects/PyABSA/3.png">
+                        <img alt="PyABSA Image 3" src="/pages/PyABSA/3.png">
                     </figure>
                 </div>
 
@@ -283,11 +296,9 @@
                         (ABSA). It simplifies the process of deploying state-of-the-art models for ABSA tasks, including
                         aspect term extraction and sentiment classification.</p>
                     <p>PyABSA offers a flexible interface that enables users to fine-tune models, conduct ABSA research,
-                        and
-                        deploy them in production. It includes pre-trained models and datasets to ease reproducibility
-                        and
-                        benchmarking. With integrations like Hugging Face and TensorFlow, PyABSA is accessible to
-                        researchers and developers in various domains.</p>
+                        and deploy them in production. It includes pre-trained models and datasets to ease
+                        reproducibility and benchmarking. With integrations like Hugging Face and TensorFlow,
+                        PyABSA is accessible to researchers and developers in various domains.</p>
 
                     <p><a class="button is-link" href="https://github.com/yangheng95/PyABSA" target="_blank">View on
                         GitHub</a></p>
@@ -322,9 +333,9 @@
                     <!--                </li>-->
                     <!--                <li>-->
                     <!--                    <a href="https://pepy.tech/project/pyabsa" target="_blank">-->
-                    <!--                        <img src="https://pepy.tech/badge/pyabsa" alt="PyABSA Downloads">-->
+                    <!--                        <img src="https://pepy.tech/badge/pyabsa" alt="pyabsa Downloads">-->
                     <!--                    </a>-->
-                    <!--                    <a href="https://github.com/yangheng95/PyABSA" target="_blank"><strong>PyABSA</strong></a>: State-of-the-art models and simplified interface for ABSA.-->
+                    <!--                    <a href="https://github.com/yangheng95/PyABSA" target="_blank"><strong>pyabsa</strong></a>: State-of-the-art models and simplified interface for ABSA.-->
                     <!--                </li>-->
                     <li>
                         <a href="https://pepy.tech/project/findfile" target="_blank">

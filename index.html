@@ -111,8 +111,9 @@
 
 <!-- Tabs Navigation -->
 <div class="tabs">
-    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
-    <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+    <button class="tablink " onclick="openTab(event, 'about')">About Me</button>
+    <button class="tablink active" onclick="openTab(event, 'omnigenomebench')">OmniGenomeBench</button>
+    <button class="tablink" onclick="openTab(event, 'pyabsa')">PyABSA</button>
     <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
     <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
 </div>
@@ -126,7 +127,11 @@
     <!-- Content will be loaded here -->
 </div>
 
-<div class="tab-content" id="projects">
+<div class="tab-content" id="omnigenomebench">
+    <!-- Content will be loaded here -->
+</div>
+
+<div class="tab-content" id="pyabsa">
     <!-- Content will be loaded here -->
 </div>
 
@@ -171,22 +176,6 @@
 </script>
 
 
-<script>
-    function togglePublications() {
-        var morePublications = document.getElementById("morePublications");
-        var toggleButton = document.getElementById("toggleButton");
-
-        if (morePublications.style.display === "none") {
-            morePublications.style.display = "block";
-            toggleButton.innerHTML = "Show Less";
-        } else {
-            morePublications.style.display = "none";
-            toggleButton.innerHTML = "Show More";
-        }
-    }
-</script>
-
-
 <!-- JavaScript to Handle Tab Functionality -->
 <script>
     // Object to keep track of loaded tab content
@@ -226,6 +215,9 @@
                     document.getElementById(tabName).innerHTML = "<p>Content could not be loaded.</p>";
                 });
         }
+        fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
+        fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
+        fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
     }
 
     // Fetch Hugging Face Model download data

@@ -1,0 +1,177 @@
+<div id="omnigenomebench">
+    <section class="section">
+        <div class="container">
+            <figure>
+                <img src="/pages/omnigenomebench/OmniGenomeBench.png" alt="OmniGenBench Architecture">
+                <!--            <figcaption>Figure 1: OmniGenBench's architecture, showcasing its open-source genomic software tools, in-silico genomic tasks, and built-in application interfaces.</figcaption>-->
+            </figure>
+            <h1 class="title"><i class="fas fa-dna"></i> OmniGenomeBench</h1>
+            <hr>
+            <div class="content">
+                <h2 class="subtitle">Abstract</h2>
+                <p>
+                    The advancements in artificial intelligence, such as Large Language Models (LLMs), have fueled
+                    expectations for breakthroughs in Genomic Foundation Models (GFMs). The genomic "code of nature,"
+                    hidden in diverse genomes since the beginning of life’s evolution, holds immense potential for
+                    impacting humans and ecosystems through genome modeling. Recent breakthroughs in GFMs, such as Evo,
+                    have attracted significant investment and attention, as they address long-standing challenges in
+                    genomic modeling. These models aim to transform in-silico genomic studies into automated, reliable,
+                    and efficient paradigms.
+                </p>
+                <p>
+                    However, GFM studies face two major challenges: the lack of GFM benchmarking tools and the absence
+                    of open-source software for diverse genomics. These challenges hinder the rapid evolution of GFMs
+                    and their wide application in tasks such as understanding and synthesizing genomes, problems that
+                    have persisted for decades.
+                </p>
+                <p>
+                    To address these challenges, we introduce <strong>OmniGenBench</strong>, a framework dedicated to
+                    GFM-oriented benchmarking. OmniGenBench standardizes benchmark suites and automates benchmarking for
+                    a wide range of open-source GFMs. It integrates millions of genomic sequences across hundreds of
+                    genomic tasks from four large-scale benchmarks, democratizing GFMs for a wide range of in-silico
+                    genomic applications.
+                </p>
+                <p>
+                    Additionally, OmniGenBench is open-source, offering user-friendly interfaces and tutorials,
+                    applicable for AutoBench and complex tasks like RNA design and structure prediction. We also
+                    launched a public leaderboard showcasing benchmark performance derived from AutoBench. OmniGenBench
+                    represents a step toward standardizing GFM benchmarking and democratizing GFM applications.
+                </p>
+
+                <h4 class="subtitle">Keywords</h4>
+                <ul>
+                    <li>RNA Foundation Model</li>
+                    <li>Genomic Foundation Model</li>
+                    <li>Benchmark</li>
+                </ul>
+
+                <h2 class="subtitle">Overview</h2>
+                <p>
+                    <strong>OmniGenBench</strong> is an open-source benchmarking software platform for Genomic
+                    Foundation Models (GFMs). Fig. 1 presents the architecture of the platform, showcasing its extensive
+                    toolkit and genomic tasks.
+                </p>
+
+                <figure>
+                    <img src="/pages/omnigenomebench/overview.png" alt="OmniGenBench Architecture">
+                    <!--                    <figcaption>Figure 1: OmniGenBench's architecture, showcasing its open-source genomic software tools, in-silico genomic tasks, and built-in application interfaces.</figcaption>-->
+                </figure>
+
+                <h2 class="subtitle">Key Features</h2>
+                <ul>
+                    <li><strong>Open-source Genomic Software:</strong> Includes AutoBench, embedding tools, RNA design,
+                        augmentation tools, and structure prediction, all under an open-source model.
+                    </li>
+                    <li><strong>In-silico Genomic Tasks:</strong> Supports tasks such as mutation detection, structure
+                        prediction, mRNA design, and phenotype classification.
+                    </li>
+                    <li><strong>Built-in Application Interfaces:</strong> Provides user-friendly wrappers and utilities
+                        to make working with GFMs more accessible for both researchers and developers.
+                    </li>
+                </ul>
+
+                <h2 class="subtitle">Benchmarking Suites</h2>
+                <p>
+                    The framework introduces four standardized benchmarking suites:
+                </p>
+                <ul>
+                    <li><strong>RNA Genomic Benchmark (RGB):</strong> Focuses on SN-level genome understanding tasks,
+                        such as predicting mRNA degradation rates.
+                    </li>
+                    <li><strong>Plant Genomic Benchmark (PGB):</strong> Evaluates GFMs specialized in plant biology
+                        through tasks like promoter strength prediction and gene expression regression.
+                    </li>
+                    <li><strong>Genomic Understanding Evaluation (GUE):</strong> A multi-species genome classification
+                        benchmark including tasks like genome sequence classification and gene expression prediction.
+                    </li>
+                    <li><strong>Genomic Benchmarks (GB):</strong> A collection of DNA genome datasets focusing on
+                        evaluating genomic sequence classification models.
+                    </li>
+                </ul>
+
+                <h2 class="subtitle">Installation</h2>
+                <p>To install OmniGenBench, use the following <code>pip</code> command:</p>
+                <pre><code>pip install omnigenome -U</code></pre>
+                <p>Or clone the repository from GitHub:</p>
+                <pre><code>git clone https://github.com/yangheng95/OmniGenomeBench
+cd OmniGenomeBench
+pip install -e .
+                </code></pre>
+
+                <h2 class="subtitle">Usage Example</h2>
+                <p>Here's how you can use the AutoBench class to automate benchmarking:</p>
+                <pre><code>from omnigenome import AutoBench
+gfm = 'LongSafari/hyenadna-medium-160k-seqlen-hf'
+bench_root = "RGB"
+bench = AutoBench(bench_root=bench_root, model_name_or_path=gfm, overwrite=False)
+bench.run(autocast=False, batch_size=32, seeds=[42])
+                </code></pre>
+
+                <h2 class="title"><i class="fas fa-code"></i> OmniGenomeBench Tutorials</h2>
+                <hr>
+
+                <div class="content">
+                    <h3 class="subtitle">Getting Started with OmniGenomeBench</h3>
+                    <p>
+                        OmniGenomeBench provides detailed tutorials for setting up and running genomic benchmarking
+                        tasks. These tutorials walk users through various use cases, from basic installations to
+                        advanced benchmarking features.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="https://github.com/yangheng95/OmniGenomeBench/blob/master/examples/tutorials/RNA_Augmentation_Tutorial.ipynb"
+                               target="_blank">Sequence Augmentation using OmniGenomeBench</a></li>
+                        <li>
+                            <a href="https://github.com/yangheng95/OmniGenomeBench/blob/master/examples/tutorials/AutoBench_Tutorial.ipynb"
+                               target="_blank">AutoBench using OmniGenomeBench</a></li>
+                        <li>
+                            <a href="https://github.com/yangheng95/OmniGenomeBench/blob/master/examples/tutorials/RNA_Design_Tutorial.ipynb"
+                               target="_blank">RNA Design using OmniGenomeBench</a></li>
+                        <li>
+                            <a href="https://github.com/yangheng95/OmniGenomeBench/blob/master/examples/tutorials/Secondary_Structure_Prediction_Tutorial.ipynb"
+                               target="_blank">RNA Secondary Structure Prediction using OmniGenomeBench</a></li>
+                    </ul>
+
+                    <p>
+                        These tutorials are designed to cater to both beginners and advanced users, enabling them to
+                        maximize the capabilities of OmniGenomeBench for a variety of genomic tasks. Whether you are
+                        working with RNA design, structure prediction, or gene expression analysis, the provided
+                        examples and documentation help streamline your workflow.
+                    </p>
+                    please refer to the following links for more information:
+                    <br>
+                    <a href="https://github.com/yangheng95/OmniGenomeBench/tree/master/examples/tutorials"
+                       target="_blank">All Available Tutorials</a>
+                    <h3>Getting Support</h3>
+                    <p>For detailed documentation, visit the <a
+                            href="https://github.com/yangheng95/OmniGenomeBench/blob/master/README.MD" target="_blank">OmniGenomeBench
+                        Documentation</a> or explore the examples in the <a
+                            href="https://github.com/yangheng95/OmniGenomeBench/tree/master/examples" target="_blank">GitHub
+                        repository</a>.</p>
+                </div>
+
+
+                <h2 class="subtitle">Conclusion</h2>
+                <p>
+                    OmniGenBench is a powerful, flexible platform designed to address the challenges of genomic
+                    foundation model benchmarking. It provides standardized benchmarking suites, open-source software,
+                    and tools that democratize access to genomic tasks such as RNA design and structure prediction.
+                    Whether you're a researcher or developer, OmniGenBench offers an easy way to test and fine-tune
+                    models.
+                </p>
+
+                <div class="buttons">
+                    <a href="https://github.com/yangheng95/OmniGenomeBench" class="button is-link">
+                        <span class="icon"><i class="fab fa-github"></i></span>
+                        <span>View on GitHub</span>
+                    </a>
+                    <a href="https://arxiv.org/abs/2410.01784" class="button is-info" target="_blank">
+                        <span class="icon"><i class="fas fa-book"></i></span>
+                        <span>Read the Paper</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
