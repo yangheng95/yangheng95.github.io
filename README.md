@@ -32,69 +32,60 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 
 ## Publications
 
--
-    *
+---
 
-*[OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models](https://arxiv.org/abs/2410.01784)
-**  
-*Heng Yang*, Jack Cole, Ke Li | Arxiv 2024
+**PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants Models**  
+Haopeng Yu, **Heng Yang#**, Wenqing Sun, Zongyun Yan, Xiaofei Yang, Huakun Zhang, Yiliang Ding, Ke Li | ***Nature Machine Intelligence*** (Accepted, Co-first Author) | [Paper](https://www.biorxiv.org/content/10.1101/2024.06.24.600509v2) | [Code](https://huggingface.co/yangheng/PlantRNA-FM)
 
--
-    *
+---
 
-*[OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation Models](https://arxiv.org/abs/2407.11242)
-**  
-*Heng Yang*, Ke Li | Arxiv 2024
+**OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models**  
+**Heng Yang**, Jack Cole, Ke Li | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2410.01784) | [Code](https://github.com/yangheng95/OmniGenomeBench)
 
--
-    *
+---
 
-*[The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples](https://openreview.net/forum?id=gLcpCzxoiM)
-**  
-*Heng Yang*, Ke Li | EMNLP 2024
+**OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation Models**  
+**Heng Yang**, Ke Li | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2407.11242) | [Code](https://github.com/yangheng95/OmniGenome)
 
--
-    *
+---
 
-*[MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction](https://openreview.net/forum?id=2ewzfedbQv)
-**  
-*Heng Yang*, Ke Li | EMNLP 2024
+**The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples**  
+**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://openreview.net/forum?id=gLcpCzxoiM) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/text_adversarial_defense)
 
-- **[Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation](https://aclanthology.org/2024.eacl-main.195)
-  **  
-  *Heng Yang*, Ke Li | EACL 2024
+---
 
--
-    *
+**MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction**  
+**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://openreview.net/forum?id=2ewzfedbQv) | [Code](https://github.com/yangheng95/OmniGenomeBench)
 
-*[PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis](https://dl.acm.org/doi/abs/10.1145/3583780.3614752)
-**  
-*Heng Yang*, Cheng Zhang, Ke Li | CIKM 2023
+---
 
--
-    *
+**Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation**  
+**Heng Yang**, Ke Li | ***EACL 2024*** | [Paper](https://aclanthology.org/2024.findings-eacl.13) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_polarity_classification)
 
-*[InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators](https://aclanthology.org/2023.findings-emnlp.907)
-**  
-*Heng Yang*, Ke Li | EMNLP 2023
+---
 
-- **[Boosting Text Augmentation via Hybrid Instance Filtering Framework](https://aclanthology.org/2023.findings-acl.105)
-  **  
-  *Heng Yang*, Ke Li | ACL 2023
+**PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis**  
+**Heng Yang**, Cheng Zhang, Ke Li | ***CIKM 2023*** | [Paper](https://dl.acm.org/doi/abs/10.1145/3583780.3614752) | [Code](https://github.com/yangheng95/PyABSA)
 
--
-    *
+---
 
-*[DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls](https://ieeexplore.ieee.org/document/10372386)
-**  
-Ke Li, *Heng Yang* | IEEE TSE, 2023
+**InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators**  
+**Heng Yang**, Ke Li | ***EMNLP 2023*** | [Paper](https://aclanthology.org/2023.findings-emnlp.907) | [Code](https://github.com/yangheng95/InstOptima)
 
--
-    *
+---
 
-*[A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction](https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534)
-**  
-*Heng Yang*, Biqing Zeng, et al. | Neurocomputing, 2021
+**Boosting Text Augmentation via Hybrid Instance Filtering Framework**  
+**Heng Yang**, Ke Li | ***ACL 2023*** | [Paper](https://aclanthology.org/2023.findings-acl.105) | [Code](https://github.com/yangheng95/BoostTextAugmentation)
+
+---
+
+**DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls**  
+Ke Li, **Heng Yang** | ***IEEE Transaction on Software, 2023*** | [Paper](https://ieeexplore.ieee.org/document/10372386) | [Code](https://github.com/yangheng95/DaNuoYi)
+
+---
+
+**A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction**  
+**Heng Yang**, Biqing Zeng, et al. | ***Neurocomputing, 2021*** | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_term_extraction)
 
 ---
 
