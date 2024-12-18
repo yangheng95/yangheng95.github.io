@@ -23,8 +23,7 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 - GitHub: [github.com/yangheng95](https://github.com/yangheng95)
 - LinkedIn: [linkedin.com/in/heng-yang-3b6278243](https://www.linkedin.com/in/heng-yang-3b6278243)
 - Hugging Face: [huggingface.co/yangheng](https://huggingface.co/yangheng)
-- Google
-  Scholar: [scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
+- Google Scholar: [scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
 - DBLP: [dblp.org/pid/83/415-8.html](https://dblp.org/pid/83/415-8.html)
 - ACL Anthology: [aclanthology.org/people/h/heng-yang](https://aclanthology.org/people/h/heng-yang)
 
@@ -35,23 +34,23 @@ Feel free to reach out to me via email or social media. I'm always open to new o
 ---
 
 **PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants Models**  
-Haopeng Yu, **Heng Yang#**, Wenqing Sun, Zongyun Yan, Xiaofei Yang, Huakun Zhang, Yiliang Ding, Ke Li | ***Nature Machine Intelligence*** (Accepted, Co-first Author) | [Paper](https://www.biorxiv.org/content/10.1101/2024.06.24.600509v2) | [Code](https://huggingface.co/yangheng/PlantRNA-FM)
+Haopeng Yu, **Heng Yang#**, et al. | ***Nature Machine Intelligence*** ( Co-first Author) | [Paper](https://www.nature.com/articles/s42256-024-00946-z) | [Code](https://huggingface.co/yangheng/PlantRNA-FM)
 
 
 **OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models**  
 **Heng Yang**, Jack Cole, Ke Li | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2410.01784) | [Code](https://github.com/yangheng95/OmniGenomeBench)
 
 
-**OmniGenome: Aligning RNA Sequences with Secondary Structures in Genomic Foundation Models**  
-**Heng Yang**, Ke Li | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2407.11242) | [Code](https://github.com/yangheng95/OmniGenome)
+**Bridging Sequence-Structure Alignment in RNA Foundation Models**  
+**Heng Yang**, Ke Li | ***AAAI 2025*** | [Paper](https://arxiv.org/abs/2407.11242) | [Code](https://github.com/yangheng95/OmniGenome)
 
 
 **The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples**  
-**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://openreview.net/forum?id=gLcpCzxoiM) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/text_adversarial_defense)
+**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.emnlp-main.481)) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/text_adversarial_defense)
 
 
 **MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction**  
-**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://openreview.net/forum?id=2ewzfedbQv) | [Code](https://github.com/yangheng95/OmniGenomeBench)
+**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.findings-emnlp.304) | [Code](https://github.com/yangheng95/OmniGenomeBench)
 
 
 **Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation**  
