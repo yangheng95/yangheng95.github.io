@@ -1,261 +1,754 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Heng Yang - Personal Website</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="favicon.jpg" rel="icon" type="image/x-icon">
-    <link href="css/main.bundle.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-    <style>
-        /* Tabs styling */
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heng Yang - AI Researcher & PhD Student</title>
+    <meta name="description" content="Heng Yang - PhD student specializing in genomics, bioinformatics, and Large Language Models at University of Exeter">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
 
-        .tabs button {
-            background-color: #f1f1f1;
-            border: none;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-        .tabs button.active {
-            background-color: #04AA6D;
-            color: white;
-        }
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .modal-card {
-            max-width: 90vw;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            max-height: 90vh;
-        }
-
-        .modal-card-body {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 1rem;
-        }
-
-        .carousel {
-            margin: 0 auto;
-            max-width: 100%;
-        }
-
-        .carousel-cell {
-            width: 100%;
-            height: 0;
-            padding-bottom: 75%;
-            position: relative;
-            margin-bottom: 1rem;
-        }
-
-        .carousel-cell img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        @media screen and (min-width: 769px) {
-            .modal-card {
-                max-width: 60vw;
-            }
-
-            .carousel-cell {
-                padding-bottom: 60%;
-            }
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<div id="header"></div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('/pages/header.html')  // Replace 'partials/' with the correct path to your header file
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                // Re-evaluate the script tag if FontAwesome is included in the header
-                const fontAwesomeScript = document.querySelector('script[src*="fontawesome"]');
-                if (!fontAwesomeScript) {
-                    const faScript = document.createElement('script');
-                    faScript.src = "https://kit.fontawesome.com/4e5a72c756.js";
-                    faScript.crossOrigin = "anonymous";
-                    document.head.appendChild(faScript);
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
-    });
-</script>
 <body>
-
-<!-- Tabs Navigation -->
-<div class="tabs">
-    <button class="tablink active" onclick="openTab(event, 'about')">About Me</button>
-    <button class="tablink" onclick="openTab(event, 'omnigenomebench')">OmniGenomeBench</button>
-    <button class="tablink" onclick="openTab(event, 'pyabsa')">PyABSA</button>
-    <button class="tablink" onclick="openTab(event, 'experience')">Experiences</button>
-    <button class="tablink" onclick="openTab(event, 'blogs')">Blogs</button>
-</div>
-
-<!-- Tab Content Placeholders -->
-<div class="tab-content" id="about">
-    <!-- Content will be loaded here -->
-</div>
-
-<div class="tab-content" id="blogs">
-    <!-- Content will be loaded here -->
-</div>
-
-<div class="tab-content" id="omnigenomebench">
-    <!-- Content will be loaded here -->
-</div>
-
-<div class="tab-content" id="pyabsa">
-    <!-- Content will be loaded here -->
-</div>
-
-<div class="tab-content" id="experience">
-    <!-- Content will be loaded here -->
-</div>
-
-
-<section class="section">
-    <div class="container">
-        <h1 class="title"><i class="fas fa-comment"></i> Comments</h1>
-        <hr/>
-        <div id="utterances-comments"></div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="dna-loader">
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+            </div>
+            <p>Loading...</p>
+        </div>
     </div>
 
-    <script async
-            crossorigin="anonymous"
-            issue-term="pathname"
-            repo="yangheng95/yangheng95.github.io"
-            src="https://utteranc.es/client.js"
-            theme="github-light">
-    </script>
-</section>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">HY</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<script src="js/bundle.js"></script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="particle-container"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Heng Yang</span>
+                </h1>
+                <h2 class="hero-subtitle">AI Researcher & PhD Student</h2>
+                <p class="hero-description">
+                    Specializing in Large Language Models, Genomic Foundation Models, and Aspect-Based Sentiment Analysis.
+                    Leading open-source initiatives with 1M+ downloads and contributing to Nature Machine Intelligence.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">
+                        <i class="fas fa-microscope"></i>
+                        Explore Research
+                    </a>
+<!--                    <a href="docs/resume.pdf" target="_blank" class="btn btn-secondary">-->
+<!--                        <i class="fas fa-download"></i>-->
+<!--                        English CV-->
+<!--                    </a>-->
+<!--                    <a href="docs/resume-cn.pdf" target="_blank" class="btn btn-secondary">-->
+<!--                        <i class="fas fa-download"></i>-->
+<!--                        中文简历-->
+<!--                    </a>-->
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="11">0</span>
+                        <span class="stat-label">First-Author Papers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="18">0</span>
+                        <span class="stat-label">GitHub Repositories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="1600">0</span>
+                        <span class="stat-label">Stars, 500k+ LOC</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">PyPI Packages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="1500000">0</span>
+                        <span class="stat-label">Huggingface Downloads</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <img src="img/avatar.jpg" alt="Heng Yang" class="profile-image">
+                    <div class="profile-ring"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-<!-- Footer container where footer.html will be loaded -->
-<div id="footer"></div>
-
-<script>
-    // JavaScript to load footer.html into the placeholder div
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('/pages/' + 'footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-            });
-    });
-</script>
 
 
-<!-- JavaScript to Handle Tab Functionality -->
-<script>
-    // Object to keep track of loaded tab content
-    var tabContentLoaded = {};
+    <!-- Resume Info Section -->
+    <section id="resume-info" class="resume-info">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Stats Overview</h2>
+          <p class="section-subtitle">Key milestones & impact at a glance</p>
+        </div>
+        <div class="resume-grid">
+          <!-- 卡片示例 -->
+          <div class="resume-card">
+            <div class="resume-icon education">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="resume-content">
+              <h3>Education</h3>
+              <p><strong>PhD in Computer Science</strong></p>
+              <p>University of Exeter, UK</p>
+              <p class="year">2021 – 2025 (Expected)</p>
+              <small>Full PhD Scholarship & Research Grant</small>
+            </div>
+          </div>
 
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
+          <!-- 其余卡片同上，去掉各自的 class，只需统一 .resume-card 即可 -->
+          <div class="resume-card">
+            <div class="resume-icon research">
+              <i class="fas fa-dna"></i>
+            </div>
+            <div class="resume-content">
+              <h3>Research Focus</h3>
+              <ul>
+                <li>Large Language Models (LLMs)</li>
+                <li>Genomic Foundation Models (GFMs)</li>
+                <li>Aspect-Based Sentiment Analysis</li>
+                <li>Adversarial ML & Fairness</li>
+              </ul>
+            </div>
+          </div>
 
-        // Hide all tab contents
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
+          <div class="resume-card">
+            <div class="resume-icon publications">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="resume-content">
+              <h3>Achievements</h3>
+              <ul>
+                <li>11 First-Author Papers</li>
+                <li>1× Nature Machine Intelligence</li>
+                <li>3× CCF-A, 4× CCF-B</li>
+                <li>610+ Citations</li>
+              </ul>
+            </div>
+          </div>
 
-        // Remove active class from all tab links
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
+          <div class="resume-card">
+            <div class="resume-icon projects">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="resume-content">
+              <h3>Open Source Impact</h3>
+              <ul>
+                <li>18 GitHub Repositories</li>
+                <li>1.6k+ Stars, 500k+ LOC</li>
+                <li>8 PyPI Packages</li>
+                <li>1M+ Downloads</li>
+              </ul>
+            </div>
+          </div>
 
-        // Show the current tab content
-        document.getElementById(tabName).style.display = "block";
+          <div class="resume-card">
+            <div class="resume-icon models">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="resume-content">
+              <h3>AI Models</h3>
+              <ul>
+                <li>9 Hugging Face Models</li>
+                <li>1.45M+ Downloads (single model)</li>
+                <li>Top-1 Open-Source ABSA Model</li>
+                <li>Featured in Stanford AI Index</li>
+              </ul>
+            </div>
+          </div>
+            <div class="social-links">
+            <a href="https://github.com/yangheng95" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://huggingface.co/yangheng" target="_blank" class="social-link">
+                <i class="fas fa-rocket"></i>
+                <span>Hugging Face</span>
+            </a>
+            <a href="https://scholar.google.com" target="_blank" class="social-link">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Google Scholar</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </a>
+        </div>
+        </div>
 
-        // Add active class to the clicked tab link
-        evt.currentTarget.classList.add("active");
+      </div>
 
-        // Load content if not already loaded or if it was cleared
-        if (!tabContentLoaded[tabName] || document.getElementById(tabName).innerHTML === "") {
-            fetch('/pages/' + tabName + '.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById(tabName).innerHTML = html;
-                    tabContentLoaded[tabName] = true;
-                })
-                .catch(error => {
-                    console.error('Error loading content:', error);
-                    document.getElementById(tabName).innerHTML = "<p>Content could not be loaded.</p>";
-                });
-        }
-        fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
-        fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
-        fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
-    }
+    </section>
 
-    // Fetch Hugging Face Model download data
-    async function fetchModelDownloads(modelId, elementId) {
-        try {
-            const response = await fetch(`https://huggingface.co/api/models/${modelId}`);
-            if (response.ok) {
-                const data = await response.json();
-                document.getElementById(elementId).textContent = ` ${data.downloads} downloads/month  `;
-            }
-        } catch (error) {
-            console.error("Error fetching model downloads:", error);
-        }
-    }
 
-    // Load the default tab content on page load
-    window.onload = function () {
-        document.querySelector('.tablink.active').click();
-        fetchModelDownloads('yangheng/deberta-v3-base-absa-v1.1', 'deberta-v3-downloads');
-        fetchModelDownloads('yangheng/PlantRNA-FM', 'plantrna-downloads');
-        fetchModelDownloads('yangheng/OmniGenome-52M', 'omnigenome-downloads');
-    };
-</script>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about advancing AI and making it accessible</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I am a PhD student at the University of Exeter, specializing in the intersection of
+                        genomics, bioinformatics, and Large Language Models. My research focuses on developing
+                        innovative computational methods for biological sequence modeling and sentiment analysis.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-dna"></i>
+                            <div>
+                                <h4>Genomics Research</h4>
+                                <p>Developing foundation models for plant RNA analysis and genomic benchmarking</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <h4>NLP & Sentiment Analysis</h4>
+                                <p>Creating frameworks for aspect-based sentiment analysis and adversarial attacks</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Open Source Contributor</h4>
+                                <p>Actively contributing to GitHub and Hugging Face with accessible AI tools</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Programming</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">C/C++</span>
+                                    <span class="skill-tag">Markdown</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>AI/ML Frameworks</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">Hugging Face</span>
+                                    <span class="skill-tag">Transformers</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Bioinformatics</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">BioPython</span>
+                                    <span class="skill-tag">Genomics</span>
+                                    <span class="skill-tag">RNA-seq</span>
+                                    <span class="skill-tag">Sequence Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="research-network">
+                        <div class="network-node center">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="network-node node-1">
+                            <i class="fas fa-dna"></i>
+                            <span>Genomics</span>
+                        </div>
+                        <div class="network-node node-2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="network-node node-3">
+                            <i class="fas fa-chart-line"></i>
+                            <span>NLP</span>
+                        </div>
+                        <div class="network-node node-4">
+                            <i class="fas fa-code"></i>
+                            <span>Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-    function togglePublications() {
-        var morePublications = document.getElementById("morePublications");
-        var toggleButton = document.getElementById("toggleButton");
+    <!-- Research Section -->
+    <section id="research" class="research section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Areas</h2>
+                <p class="section-subtitle">Exploring the frontiers of AI and bioinformatics</p>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Plant Genomics</h3>
+                    <p>Developing interpretable RNA foundation models for exploring functional RNA motifs in plants, with applications in agricultural biotechnology.</p>
+                    <div class="research-tags">
+                        <span>RNA Analysis</span>
+                        <span>Plant Biology</span>
+                        <span>Foundation Models</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Genomic Benchmarking</h3>
+                    <p>Creating automated large-scale in-silico benchmarking frameworks for genomic foundation models to accelerate research.</p>
+                    <div class="research-tags">
+                        <span>Benchmarking</span>
+                        <span>Automation</span>
+                        <span>Evaluation</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Sentiment Analysis</h3>
+                    <p>Advancing aspect-based sentiment analysis with modular frameworks and state-of-the-art models for real-world applications.</p>
+                    <div class="research-tags">
+                        <span>NLP</span>
+                        <span>Sentiment</span>
+                        <span>ABSA</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="research-content">
+                        <h3>Adversarial ML</h3>
+                        <p>Investigating adversarial attacks and robustness in machine learning models, with focus on NLP applications.</p>
+                        <div class="research-tags">
+                            <span>Security</span>
+                            <span>Robustness</span>
+                            <span>Defense</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Large Language Models (LLMs)</h3>
+                    <p>Developing and applying LLMs for genomics, sentiment analysis, and multi-task learning. Research includes model interpretability, instruction optimization, and real-world applications.</p>
+                    <div class="research-tags">
+                        <span>LLM</span>
+                        <span>Genomics</span>
+                        <span>Sentiment Analysis</span>
+                        <span>Instruction Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        if (morePublications.style.display === "none") {
-            morePublications.style.display = "block";
-            toggleButton.innerHTML = "Show Less";
-        } else {
-            morePublications.style.display = "none";
-            toggleButton.innerHTML = "Show More";
-        }
-    }
-</script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Open-source tools making AI accessible</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="pages/omnigenomebench/OmniGenomeBench.png" alt="OmniGenomeBench">
+                        <div class="project-overlay">
+                            <a href="https://github.com/yangheng95/OmniGenBench" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://arxiv.org/abs/2410.01784" target="_blank" class="project-link">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>OmniGenBench</h3>
+                        <p>Automated large-scale benchmarking framework for genomic foundation models, enabling comprehensive evaluation across multiple tasks and datasets.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-star"></i> 150+ Stars</span>
+                            <span><i class="fas fa-code-branch"></i> 25+ Forks</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Genomics</span>
+                            <span>Benchmarking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="pages/pyabsa/PyABSA.png" alt="PyABSA">
+                        <div class="project-overlay">
+                            <a href="https://github.com/yangheng95/PyABSA" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://pypi.org/project/pyabsa/" target="_blank" class="project-link">
+                                <i class="fab fa-python"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>PyABSA</h3>
+                        <p>Modularized framework for reproducible aspect-based sentiment analysis with pre-trained models and comprehensive benchmarks.</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-download"></i> 50K+ Downloads</span>
+                            <span><i class="fas fa-star"></i> 800+ Stars</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Transformers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>FindFile</h3>
+                        <p>Intelligent file searching tool with advanced filtering and pattern matching capabilities.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/yangheng95/FindFile" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>CLI Tool</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>MetricVisualizer</h3>
+                        <p>Comprehensive visualization toolkit for machine learning metrics and model performance analysis.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/yangheng95/MetricVisualizer" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>BoostAug</h3>
+                        <p>Data augmentation library for boosting machine learning model performance with intelligent augmentation strategies.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/yangheng95/BoostAug" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Data Augmentation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>PlantRNA-FM</h3>
+                        <p>Interpretable RNA foundation model for exploring functional RNA motifs in plants, published in Nature Machine Intelligence.</p>
+                        <div class="project-links">
+                            <a href="https://huggingface.co/yangheng/PlantRNA-FM" target="_blank">
+                                <i class="fas fa-rocket"></i> Hugging Face
+                            </a>
+                        </div>
+                        <div class="project-tech">
+                            <span>RNA Analysis</span>
+                            <span>Foundation Model</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Publications Section -->
+    <section id="publications" class="publications section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Selected Publications</h2>
+                <p class="section-subtitle">Contributing to top-tier conferences and journals</p>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <div class="publication-year">2025</div>
+                    <div class="publication-content">
+                        <h3>Bridging Sequence-Structure Alignment in RNA Foundation Models</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>AAAI 2025</strong> (CCF-A)</p>
+                        <div class="publication-links">
+                            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/35500/37655" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/OmniGenome" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-content">
+                        <h3>PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants</h3>
+                        <p class="authors">Haopeng Yu#, <strong>Heng Yang#</strong>, Wenqing Sun, Zongyun Yan, Xiaofei Yang, Huakun Zhang, Yiliang Ding, Ke Li</p>
+                        <p class="venue"><strong>Nature Machine Intelligence</strong> (Co-first Author)</p>
+                        <div class="publication-links">
+                            <a href="https://www.nature.com/articles/s42256-024-00946-z" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://huggingface.co/yangheng/PlantRNA-FM" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-content">
+                        <h3>MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>EMNLP 2024</strong> (CCF-B)</p>
+                        <div class="publication-links">
+                            <a href="https://aclanthology.org/2024.findings-emnlp.304/" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/MP-RNA" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-content">
+                        <h3>The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>EMNLP 2024</strong> (CCF-B)</p>
+                        <div class="publication-links">
+                            <a href="https://aclanthology.org/2024.emnlp-main.481.pdf" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/Rapid" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-content">
+                        <h3>DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls</h3>
+                        <p class="authors">Ke Li#, <strong>Heng Yang#</strong>, Willem Visser</p>
+                        <p class="venue"><strong>IEEE Transactions on Software Engineering</strong> (CCF-A)</p>
+                        <div class="publication-links">
+                            <a href="https://ieeexplore.ieee.org/document/10372386" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/DaNuoYi" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2024</div>
+                    <div class="publication-content">
+                        <h3>Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>EACL 2024</strong> (CORE-A)</p>
+                        <div class="publication-links">
+                            <a href="https://aclanthology.org/2024.findings-eacl.13" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/PyABSA" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2023</div>
+                    <div class="publication-content">
+                        <h3>InstOptima: Evolutionary Multi-objective Instruction Optimization via LLM-based Instruction Operators</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>EMNLP 2023</strong> (CCF-B)</p>
+                        <div class="publication-links">
+                            <a href="https://aclanthology.org/2023.findings-emnlp.907" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/InstOptima" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2023</div>
+                    <div class="publication-content">
+                        <h3>BoostAug: Boosting Text Augmentation via Hybrid Instance Filtering Framework</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Ke Li</p>
+                        <p class="venue"><strong>ACL 2023</strong> (CCF-A)</p>
+                        <div class="publication-links">
+                            <a href="https://aclanthology.org/2023.findings-acl.105" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/BoostAug" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-year">2023</div>
+                    <div class="publication-content">
+                        <h3>PyABSA: A Modularized Framework for Reproducible Aspect-Based Sentiment Analysis</h3>
+                        <p class="authors"><strong>Heng Yang</strong>, Chen Zhang, Ke Li</p>
+                        <p class="venue"><strong>CIKM 2023</strong> (CCF-B)</p>
+                        <div class="publication-links">
+                            <a href="https://dl.acm.org/doi/abs/10.1145/3583780.3614752" target="_blank">
+                                <i class="fas fa-file-alt"></i> Paper
+                            </a>
+                            <a href="https://github.com/yangheng95/PyABSA" target="_blank">
+                                <i class="fas fa-code"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="publication-venues">
+                <h3>Publication Venues</h3>
+                <div class="venue-tags">
+                    <span class="venue-tag">Nature Machine Intelligence</span>
+                    <span class="venue-tag">ACL</span>
+                    <span class="venue-tag">EMNLP</span>
+                    <span class="venue-tag">CIKM</span>
+                    <span class="venue-tag">EACL</span>
+                    <span class="venue-tag">IEEE TSE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Open to collaborations and discussions</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>Institution</h4>
+                            <p>University of Exeter<br>Computer Science Department</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hy345@exeter.ac.uk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Exeter, United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Heng Yang. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <p>Built with creativity and passion for research</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
