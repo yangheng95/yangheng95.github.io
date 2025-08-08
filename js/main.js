@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initThemeToggle();
     initSmoothScrolling();
     initDownloadCountAnimation();
+    initFooterLogoOverlay();
 });
 
 // Loading Screen
@@ -290,6 +291,19 @@ function initDownloadCountAnimation() {
     checkAndAnimate();
 }
 
+// Footer logo overlay functionality
+function initFooterLogoOverlay() {
+    var logo = document.getElementById('footerLogo');
+    var overlay = document.getElementById('footerOverlay');
+    if (!logo || !overlay) return;
+    logo.addEventListener('click', function() {
+        overlay.style.display = 'flex';
+    });
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+}
+
 // Additional interactive features
 class InteractiveFeatures {
     constructor() {
@@ -507,7 +521,7 @@ class EasterEggs {
                     }
                     // Reset for other animations or future interactions
                     clickCount = 0;
-                } else if (clickCount === 1) {
+                } else if (clickCount === 1) { 的
                      this.showNotification(`Click ${requiredClicks - clickCount} more times...`);
                 }
             });

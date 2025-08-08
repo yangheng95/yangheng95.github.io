@@ -1,123 +1,90 @@
-# [View My Profile](https://yangheng95.github.io/)
+# [Heng Yang's Profile](https://yangheng95.github.io/)
 
-## About Me
-
-I am a PhD student at the University of Exeter, specializing in genomics, bioinformatics, and Large Language Models (
-LLMs). My research includes biological sequence modeling, sentiment analysis, adversarial attacks, and open-source tool
-development. I’ve contributed to the field with **OmniGenomeBench** and **PyABSA**, and have published in leading
-conferences like ACL, EMNLP, CIKM, EACL, IEEE TSE, etc.
-
-I actively contribute to platforms like **GitHub** and **Hugging Face**, sharing tools like **FindFile**, *
-*MetricVisualizer**, **BoostAug**. I’m committed to advancing AI and NLP while making these technologies accessible
-through open-source contributions.
-
-Expected to graduate in 2025 and open to new opportunities in academia and industry.
+[![GitHub followers](https://img.shields.io/github/followers/yangheng95?style=social)](https://github.com/yangheng95)
+[![Hugging Face followers](https://img.shields.io/badge/🤗%20Hugging%20Face-Follow-yellow)](https://huggingface.co/yangheng)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-Follow-blue)](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/heng-yang-3b6278243)
 
 ---
 
-## Contact
+## 📖 About Me
 
-Feel free to reach out to me via email or social media. I'm always open to new opportunities and collaborations.
+I am a final-year Ph.D. candidate at the University of Exeter, expecting to graduate in 2025. My research focuses on **genomics**, **bioinformatics**, and **Large Language Models (LLMs)**, including biological sequence modeling, sentiment analysis, and adversarial attacks.
 
-- Email: [hy345@exeter.ac.uk](mailto:hy345@exeter.ac.uk)
-- GitHub: [github.com/yangheng95](https://github.com/yangheng95)
-- LinkedIn: [linkedin.com/in/heng-yang-3b6278243](https://www.linkedin.com/in/heng-yang-3b6278243)
-- Hugging Face: [huggingface.co/yangheng](https://huggingface.co/yangheng)
-- Google Scholar: [scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
-- DBLP: [dblp.org/pid/83/415-8.html](https://dblp.org/pid/83/415-8.html)
-- ACL Anthology: [aclanthology.org/people/h/heng-yang](https://aclanthology.org/people/h/heng-yang)
+I am the creator of two open-source projects, **OmniGenBench** and **PyABSA**, and have published my work in top-tier conferences such as *ACL*, *EMNLP*, *AAAI*, and *CIKM*. I am passionate about advancing AI and NLP and am actively seeking new opportunities in both academia and industry.
 
 ---
 
-## Publications
+## 🚀 Major Projects
 
----
-
-**PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants Models**  
-Haopeng Yu, **Heng Yang#**, et al. | ***Nature Machine Intelligence*** ( Co-first Author) | [Paper](https://www.nature.com/articles/s42256-024-00946-z) | [Code](https://huggingface.co/yangheng/PlantRNA-FM)
-
-
-**OmniGenomeBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models**  
-**Heng Yang**, Jack Cole, Ke Li | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2410.01784) | [Code](https://github.com/yangheng95/OmniGenomeBench)
-
-
-**Bridging Sequence-Structure Alignment in RNA Foundation Models**  
-**Heng Yang**, Ke Li | ***AAAI 2025*** | [Paper](https://arxiv.org/abs/2407.11242) | [Code](https://github.com/yangheng95/OmniGenome)
-
-
-**The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples**  
-**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.emnlp-main.481)) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/text_adversarial_defense)
-
-
-**MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction**  
-**Heng Yang**, Ke Li | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.findings-emnlp.304) | [Code](https://github.com/yangheng95/OmniGenomeBench)
-
-
-**Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation**  
-**Heng Yang**, Ke Li | ***EACL 2024*** | [Paper](https://aclanthology.org/2024.findings-eacl.13) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_polarity_classification)
-
-
-**PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis**  
-**Heng Yang**, Cheng Zhang, Ke Li | ***CIKM 2023*** | [Paper](https://dl.acm.org/doi/abs/10.1145/3583780.3614752) | [Code](https://github.com/yangheng95/PyABSA)
-
-
-**InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators**  
-**Heng Yang**, Ke Li | ***EMNLP 2023*** | [Paper](https://aclanthology.org/2023.findings-emnlp.907) | [Code](https://github.com/yangheng95/InstOptima)
-
-
-**Boosting Text Augmentation via Hybrid Instance Filtering Framework**  
-**Heng Yang**, Ke Li | ***ACL 2023*** | [Paper](https://aclanthology.org/2023.findings-acl.105) | [Code](https://github.com/yangheng95/BoostTextAugmentation)
-
-
-**DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls**  
-Ke Li, **Heng Yang** | ***IEEE Transaction on Software, 2023*** | [Paper](https://ieeexplore.ieee.org/document/10372386) | [Code](https://github.com/yangheng95/DaNuoYi)
-
-
-**A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction**  
-**Heng Yang**, Biqing Zeng, et al. | ***Neurocomputing, 2021*** | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_term_extraction)
-
----
-
-## GitHub Projects
-
-### [OmniGenomeBench](https://github.com/yangheng95/OmniGenomeBench)
-
-A large-scale in-silico benchmarking framework for genomic foundation models (GFMs). It addresses the lack of
-standardized tools for evaluating GFMs, automating the benchmarking process for diverse models. Features a public
-leaderboard for tracking performance across models.
-
-- ![GitHub stars](https://img.shields.io/github/stars/yangheng95/OmniGenomeBench?style=social)
-- ![PePy Downloads](https://pepy.tech/badge/omnigenome)
+### [OmniGenBench](https://github.com/yangheng95/OmniGenBench)
+A large-scale, in-silico benchmarking framework for genomic foundation models (GFMs). It standardizes the evaluation of GFMs and features a public leaderboard to track their performance.
+- ![GitHub stars](https://img.shields.io/github/stars/yangheng95/OmniGenBench?style=social)
+- ![PyPI Downloads](https://img.shields.io/pypi/v/omnigenome)
+- ![PyPI Downloads](https://img.shields.io/pypi/dm/omnigenome)
 
 ### [PyABSA](https://github.com/yangheng95/PyABSA)
-
-A modularized framework for Aspect-Based Sentiment Analysis (ABSA). PyABSA simplifies sentiment analysis tasks with
-pre-trained models and datasets for research and production environments.
-
+A modularized framework for Aspect-Based Sentiment Analysis (ABSA). PyABSA provides pre-trained models and datasets to simplify sentiment analysis tasks for both research and production.
 - ![GitHub stars](https://img.shields.io/github/stars/yangheng95/PyABSA?style=social)
-- ![PePy Downloads](https://pepy.tech/badge/pyabsa)
+- ![PyPI Downloads](https://img.shields.io/pypi/dm/pyabsa)
 
 ---
 
-## Hugging Face Models
+## 📝 Publications
 
-- **[DeBERTa-v3 Base ABSA](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1)**  
-  A model for aspect-based sentiment analysis (ABSA), trained with over 30k samples for tasks like sentiment
-  classification.  
-  📦 0 downloads/month
+- **PlantRNA-FM: An Interpretable RNA Foundation Model for Exploration Functional RNA Motifs in Plants Models**  
+  *Haopeng Yu, **Heng Yang#**, et al.* | ***Nature Machine Intelligence*** (Co-first Author) | [Paper](https://www.nature.com/articles/s42256-024-00946-z) | [Code](https://huggingface.co/yangheng/PlantRNA-FM)
 
-- **[PlantRNA-FM](https://huggingface.co/yangheng/PlantRNA-FM)**  
-  An interpretable RNA foundation model for exploring functional RNA motifs in plants. Pre-trained on data from over
-  1,124 plant species.  
-  📦 0 downloads/month
+- **OmniGenBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models**  
+  ***Heng Yang**, Jack Cole, Ke Li* | ***arXiv 2024*** | [Paper](https://arxiv.org/abs/2410.01784) | [Code](https://github.com/yangheng95/OmniGenBench)
 
-- **[OmniGenome](https://huggingface.co/yangheng/OmniGenome-52M)**  
-  A genomic model aimed at biological sequence modeling, part of the OmniGenome project.  
-  📦 0 downloads/month
+- **Bridging Sequence-Structure Alignment in RNA Foundation Models**  
+  ***Heng Yang**, Ke Li* | ***AAAI 2025*** | [Paper](https://arxiv.org/abs/2407.11242) | [Code](https://github.com/yangheng95/OmniGenome)
+
+- **The Best Defense is Attack: Repairing Semantics in Textual Adversarial Examples**  
+  ***Heng Yang**, Ke Li* | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.emnlp-main.481) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/text_adversarial_defense)
+
+- **MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction**  
+  ***Heng Yang**, Ke Li* | ***EMNLP 2024*** | [Paper](https://aclanthology.org/2024.findings-emnlp.304) | [Code](https://github.com/yangheng95/OmniGenBench)
+
+- **Modeling Aspect Sentiment Coherency via Local Sentiment Aggregation**  
+  ***Heng Yang**, Ke Li* | ***EACL 2024*** | [Paper](https://aclanthology.org/2024.findings-eacl.13) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_polarity_classification)
+
+- **PyABSA: A Modularized Framework for Reproducible Aspect-based Sentiment Analysis**  
+  ***Heng Yang**, Cheng Zhang, Ke Li* | ***CIKM 2023*** | [Paper](https://dl.acm.org/doi/abs/10.1145/3583780.3614752) | [Code](https://github.com/yangheng95/PyABSA)
+
+- **InstOptima: Evolutionary Multi-objective Instruction Optimization via Large Language Model-based Instruction Operators**  
+  ***Heng Yang**, Ke Li* | ***EMNLP 2023*** | [Paper](https://aclanthology.org/2023.findings-emnlp.907) | [Code](https://github.com/yangheng95/InstOptima)
+
+- **Boosting Text Augmentation via Hybrid Instance Filtering Framework**  
+  ***Heng Yang**, Ke Li* | ***ACL 2023*** | [Paper](https://aclanthology.org/2023.findings-acl.105) | [Code](https://github.com/yangheng95/BoostTextAugmentation)
+
+- **DaNuoYi: Evolutionary Multi-Task Injection Testing on Web Application Firewalls**  
+  *Ke Li, **Heng Yang*** | ***IEEE Transaction on Software, 2023*** | [Paper](https://ieeexplore.ieee.org/document/10372386) | [Code](https://github.com/yangheng95/DaNuoYi)
+
+- **A Multi-task Learning Model for Chinese-oriented Aspect Polarity Classification and Aspect Term Extraction**  
+  ***Heng Yang**, Biqing Zeng, et al.* | ***Neurocomputing, 2021*** | [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0925231220312534) | [Code](https://github.com/yangheng95/PyABSA/tree/v2/examples-v2/aspect_term_extraction)
 
 ---
 
-## Community Contribution
+## 🤗 Hugging Face Models
 
-![yangheng95 GitHub Stats](https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true)  
-Profile Views: ![Profile Views](https://komarev.com/ghpvc/?username=yangheng95)
+- **[DeBERTa-v3 Base ABSA](https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1)**: A model for aspect-based sentiment analysis, trained on over 30k samples.
+- **[PlantRNA-FM](https://huggingface.co/yangheng/PlantRNA-FM)**: An interpretable RNA foundation model pre-trained on data from over 1,124 plant species.
+- **[OmniGenome](https://huggingface.co/yangheng/OmniGenome-52M)**: A genomic model for biological sequence modeling, part of the OmniGenome project.
+
+---
+
+## 🏆 Community Contribution
+
+![yangheng95's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true&theme=radical)
+![Profile Views](https://komarev.com/ghpvc/?username=yangheng95)
+
+---
+
+## 📫 Contact Me
+
+- **Email**: [hy345@exeter.ac.uk](mailto:hy345@exeter.ac.uk)
+- **Website**: [yangheng95.github.io](httpss://yangheng95.github.io/)
+- **DBLP**: [dblp.org/pid/83/415-8.html](https://dblp.org/pid/83/415-8.html)
+- **ACL Anthology**: [aclanthology.org/people/h/heng-yang](https://aclanthology.org/people/h/heng-yang)
