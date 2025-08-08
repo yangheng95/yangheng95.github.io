@@ -38,10 +38,10 @@
         </div>
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#research" class="nav-link">Research</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#publications" class="nav-link">Publications</a></li>
+            <li><a href="#models" class="nav-link">HF Models</a></li>
+            <li><a href="#spaces" class="nav-link">HF Spaces</a></li>
+            <li><a href="#projects" class="nav-link">GitHub Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="hamburger">
@@ -80,10 +80,10 @@
                 <a href="docs/resume.pdf" target="_blank" class="btn btn-secondary"
                    style="opacity:1;pointer-events:auto;" aria-label="Download English CV">
                     <i class="fas fa-download"></i>
-                    English CV
+                    Resume
                 </a>
                 <a href="docs/resume-cn.pdf" target="_blank" class="btn btn-secondary"
-                   style="opacity:1;pointer-events:auto;" aria-label="Download Chinese Resume">
+                   style="opacity:0;pointer-events:auto;" aria-label="Download Chinese Resume">
                     <i class="fas fa-download"></i>
                     中文简历
                 </a>
@@ -92,6 +92,10 @@
                 <div class="stat">
                     <span class="stat-number" data-target="11">0</span>
                     <span class="stat-label">First-Author Papers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="625">0</span>
+                    <span class="stat-label">Paper Citations</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number" data-target="18">0</span>
@@ -373,74 +377,134 @@
 <section id="models" class="models section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Featured Models</h2>
-            <p class="section-subtitle">A collection of open-source models on Hugging Face</p>
+            <h2 class="section-title">Featured Huggingface Models</h2>
+            <p class="section-subtitle">State-of-the-art AI models powering research and applications worldwide</p>
+            <div class="view-all-models">
+                <a href="https://huggingface.co/yangheng" target="_blank" class="btn-outline">
+                    <i class="fas fa-external-link-alt"></i>
+                    View All Models on Hugging Face
+                </a>
+            </div>
+             <div class="summary-item">
+
+                    <div class="summary-content">
+                        <i class="fas fa-star"></i>
+                        <span class="summary-number">150+</span>
+                        <span class="summary-label">Likes & Favorites</span>
+                    </div>
+                </div>
         </div>
-        <div class="models-grid">
-            <div class="model-card">
-                <div class="model-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="model-content">
+        <div class="publications-list">
+            <div class="publication-item">
+                <div class="publication-year">Most Popular</div>
+                <div class="publication-content">
                     <h3>deberta-v3-base-absa-v1.1</h3>
-                    <p>A top-performing, lightweight model for Aspect-Based Sentiment Analysis, with over 1.45 million downloads. Featured in the Stanford AI Index Report.</p>
-                    <div class="model-stats">
-                        <span><i class="fas fa-download"></i> 1.45M+ Downloads</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1" target="_blank" class="btn-hf">
-                            <i class="fas fa-rocket"></i> View on Hugging Face
+                    <p class="authors">Aspect-Based Sentiment Analysis</p>
+                    <p class="venue">A top-performing, lightweight model for fine-grained sentiment analysis. Featured in Stanford AI Index Report 2022 as the leading open-source ABSA model.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/yangheng/deberta-v3-base-absa-v1.1" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face
                         </a>
+                        <span class="stat-info"> <span class="download-count" data-count="1500000">0</span>+ Downloads</span>
                     </div>
                 </div>
             </div>
-            <div class="model-card">
-                <div class="model-icon">
-                    <i class="fas fa-dna"></i>
-                </div>
-                <div class="model-content">
+
+            <div class="publication-item">
+                <div class="publication-year">AAAI 2025</div>
+                <div class="publication-content">
                     <h3>OmniGenome-186M</h3>
-                    <p>The first sequence-structure alignment model for RNA, boosting RNA design success rates from 3% to 84%. A foundational tool for genomics research.</p>
-                    <div class="model-stats">
-                        <span><i class="fas fa-download"></i> 67k+ Downloads</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/yangheng/OmniGenome-186M" target="_blank" class="btn-hf">
-                            <i class="fas fa-rocket"></i> View on Hugging Face
+                    <p class="authors">RNA Foundation Model</p>
+                    <p class="venue">Revolutionary sequence-structure alignment model that dramatically improved RNA design success rates from 3% to 84%, setting new standards in computational biology.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/yangheng/OmniGenome-186M" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face
                         </a>
+                        <span class="stat-info"> <span class="download-count" data-count="67000">0</span>+ Downloads</span>
                     </div>
                 </div>
             </div>
-            <div class="model-card">
-                <div class="model-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <div class="model-content">
+
+            <div class="publication-item">
+                <div class="publication-year">Nature</div>
+                <div class="publication-content">
                     <h3>PlantRNA-FM</h3>
-                    <p>An interpretable foundation model for discovering functional RNA motifs in plants, contributing to advancements in agricultural biotechnology.</p>
-                    <div class="model-stats">
-                        <span><i class="fas fa-star"></i> Nature Sub-Journal</span>
+                    <p class="authors">Plant RNA Foundation Model</p>
+                    <p class="venue">An interpretable foundation model for discovering functional RNA motifs in plants, advancing agricultural biotechnology and crop improvement research. <strong>Nature Machine Intelligence</strong></p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/yangheng/PlantRNA-FM" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face
+                        </a>
+                        <span class="stat-info">35M Parameters</span>
                     </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/yangheng/PlantRNA-FM" target="_blank" class="btn-hf">
-                            <i class="fas fa-rocket"></i> View on Hugging Face
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-year">EMNLP 2024</div>
+                <div class="publication-content">
+                    <h3>MP-RNA</h3>
+                    <p class="authors">Multi-Species RNA Model</p>
+                    <p class="venue">Advanced multi-species RNA foundation model with calibrated secondary structure prediction capabilities, enabling cross-species RNA analysis.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/yangheng/MP-RNA" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face
+                        </a>
+                        <span class="stat-info">186M Parameters</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Hugging Face Spaces Section -->
+<section id="spaces" class="models section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Hugging Face Spaces</h2>
+            <p class="section-subtitle">Interactive demos and applications</p>
+        </div>
+        <div class="publications-list">
+            <div class="publication-item">
+                <div class="publication-year">CIKM 2023</div>
+                <div class="publication-content">
+                    <h3>PyABSA Space</h3>
+                    <p class="authors">Interactive Aspect-Based Sentiment Analysis</p>
+                    <p class="venue">A comprehensive, interactive demo hub for ABSA. Featured as an official demo by Gradio-Blocks.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/spaces/Gradio-Blocks/Multilingual-Aspect-Based-Sentiment-Analysis" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face Space
+                        </a>
+                        <span class="stat-info"><span class="download-count" data-count="142000">0</span>+ Visits</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-year">arXiv 2024</div>
+                <div class="publication-content">
+                    <h3>OmniGenBench</h3>
+                    <p class="authors">Genomic Foundation Models Leaderboard</p>
+                    <p class="venue">The official online leaderboard, allowing researchers to easily trial the benchmark framework.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/spaces/yangheng/OmniGenomeLeaderboard" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face Space
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="model-card">
-                <div class="model-icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="model-content">
-                    <h3>MP-RNA</h3>
-                    <p>A multi-species RNA foundation model designed for calibrated secondary structure prediction across different species.</p>
-                    <div class="model-stats">
-                        <span><i class="fas fa-book"></i> EMNLP 2024</span>
-                    </div>
-                    <div class="model-links">
-                        <a href="https://huggingface.co/yangheng/MP-RNA" target="_blank" class="btn-hf">
-                            <i class="fas fa-rocket"></i> View on Hugging Face
+
+            <div class="publication-item">
+                <div class="publication-year">EMNLP 2024</div>
+                <div class="publication-content">
+                    <h3>Rapid Textual Adversarial Defense</h3>
+                    <p class="authors">Textual Adversarial Attack & Defense Demo</p>
+                    <p class="venue">An interactive demo for textual adversarial attack and defense.</p>
+                    <div class="publication-links">
+                        <a href="https://huggingface.co/spaces/anonymous8/Rapid-Textual-Adversarial-Defense" target="_blank">
+                            <i class="fas fa-rocket"></i> Hugging Face Space
                         </a>
                     </div>
                 </div>
@@ -449,11 +513,12 @@
     </div>
 </section>
 
+
 <!-- Projects Section -->
 <section id="projects" class="projects section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">GitHub Projects</h2>
             <p class="section-subtitle">Open-source tools making AI accessible</p>
         </div>
         <div class="projects-grid">

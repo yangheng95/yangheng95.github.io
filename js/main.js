@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initThemeToggle();
     initSmoothScrolling();
+    initDownloadCountAnimation();
 });
 
 // Loading Screen
@@ -249,6 +250,44 @@ function initSmoothScrolling() {
             }
         });
     });
+}
+
+// Download count animation
+function animateDownloadCounts() {
+    const counters = document.querySelectorAll('.download-count');
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-count');
+        let current = 0;
+        const increment = Math.max(1, Math.floor(target / 100));
+        function updateCounter() {
+            if (current < target) {
+                current += increment;
+                if (current > target) current = target;
+                counter.textContent = current.toLocaleString();
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target.toLocaleString();
+            }
+        }
+        updateCounter();
+    });
+}
+
+// Initialize download count animation on scroll
+function initDownloadCountAnimation() {
+    let triggered = false;
+    function checkAndAnimate() {
+        const modelsSection = document.getElementById('models');
+        if (!triggered && modelsSection) {
+            const rect = modelsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                animateDownloadCounts();
+                triggered = true;
+            }
+        }
+    }
+    window.addEventListener('scroll', checkAndAnimate);
+    checkAndAnimate();
 }
 
 // Additional interactive features
