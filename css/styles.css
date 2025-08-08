@@ -1440,3 +1440,13 @@ html {
   background-color: #2a2a2a !important;
 }
 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .profile-container {
+    margin: 0 auto;
+    max-width: 200px;
+  }
+}
