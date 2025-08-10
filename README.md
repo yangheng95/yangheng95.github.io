@@ -78,6 +78,8 @@ A modularized framework for Aspect-Based Sentiment Analysis (ABSA). PyABSA provi
 ## 🏆 Community Contribution
 
 ![yangheng95's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true&theme=radical)
+
+## 📊 Profile Views
 ![Profile Views](https://komarev.com/ghpvc/?username=yangheng95)
 
 ---
