@@ -1,15 +1,17 @@
 # [Heng Yang's Profile](https://yangheng95.github.io/)
-
+![GitHub User's stars](https://img.shields.io/github/stars/yangheng95?affiliations=OWNER%2CCOLLABORATOR&style=social)
 [![GitHub followers](https://img.shields.io/github/followers/yangheng95?style=social)](https://github.com/yangheng95)
-[![Hugging Face followers](https://img.shields.io/badge/🤗%20Hugging%20Face-Follow-yellow)](https://huggingface.co/yangheng)
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-Follow-blue)](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/heng-yang-3b6278243)
+[![PyPI Packages](https://img.shields.io/badge/PyPI_Packages-8-green)](https://pypi.org/user/yangheng)
+![PyPI Downloads](https://img.shields.io/badge/PyPI_Downloads-1.1_Millions-green)
+![Hugging Face Followers](https://img.shields.io/badge/Hugging_Face%20Followers-25-yellow)
+[![Hugging Face Downloads](https://img.shields.io/badge/Hugging_Face_Downloads-1.5_Millions-yellow)](https://huggingface.co/yangheng)
+[![Citations](https://img.shields.io/badge/Google_Scholar_Citations-625-blue)](https://scholar.google.com/citations?user=NPq5a_0AAAAJ&hl=en)
 
 ---
 
 ## 📖 About Me
 
-I am a final-year Ph.D. candidate at the University of Exeter, expecting to graduate in 2025. My research focuses on **genomics**, **bioinformatics**, and **Large Language Models (LLMs)**, including biological sequence modeling, sentiment analysis, and adversarial attacks.
+I am a final-year Ph.D. student at the University of Exeter, expecting to graduate in 2025. My research focuses on **Large Language Models (LLMs)**, **Genomics**, **Software Engineering**, and  including biological sequence modeling, sentiment analysis, and adversarial attacks.
 
 I am the creator of two open-source projects, **OmniGenBench** and **PyABSA**, and have published my work in top-tier conferences such as *ACL*, *EMNLP*, *AAAI*, and *CIKM*. I am passionate about advancing AI and NLP and am actively seeking new opportunities in both academia and industry.
 
@@ -26,8 +28,18 @@ A large-scale, in-silico benchmarking framework for genomic foundation models (G
 ### [PyABSA](https://github.com/yangheng95/PyABSA)
 A modularized framework for Aspect-Based Sentiment Analysis (ABSA). PyABSA provides pre-trained models and datasets to simplify sentiment analysis tasks for both research and production.
 - ![GitHub stars](https://img.shields.io/github/stars/yangheng95/PyABSA?style=social)
+- ![PyPI Downloads](https://img.shields.io/pypi/v/pyabsa)
 - ![PyPI Downloads](https://img.shields.io/pypi/dm/pyabsa)
 
+### [BoostAug](https://github.com/yangheng95/BoostTextAugmentation)
+A text augmentation framework that enhances the quality of augmented data through hybrid instance filtering. It supports various augmentation techniques and is designed to improve model robustness.
+- ![GitHub stars](https://img.shields.io/github/stars/yangheng95/BoostTextAugmentation?style=social)
+- ![PyPI Downloads](https://img.shields.io/pypi/v/boostaug)
+- ![PyPI Downloads](https://img.shields.io/pypi/dm/boostaug)
+
+### [RNADesign-GRPO](https://github.com/yangheng95/RNADesign-GRPO)
+A framework for RNA design using OmniGenome and GRPO. It integrates genomic foundation models with to facilitate RNA sequence design and structure prediction.
+- ![GitHub stars](https://img.shields.io/github/stars/yangheng95/RNADesign-GRPO?style=social)
 ---
 
 ## 📝 Publications
@@ -78,8 +90,6 @@ A modularized framework for Aspect-Based Sentiment Analysis (ABSA). PyABSA provi
 ## 🏆 Community Contribution
 
 ![yangheng95's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yangheng95&show_icons=true&theme=radical)
-
-## 📊 Profile Views
 ![Profile Views](https://komarev.com/ghpvc/?username=yangheng95)
 
 ---
