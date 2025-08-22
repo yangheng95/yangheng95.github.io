@@ -1509,3 +1509,38 @@ html {
 }
 .footer-overlay {
     cursor: pointer;
+}
+
+/* Profile icons under hero bio */
+.profile-icons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+}
+.profile-icons a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+.profile-icons a:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--bg-secondary);
+  transform: translateY(-2px);
+}
+.profile-icons i {
+  font-size: 1rem;
+}
+:root[data-theme="dark"] .profile-icons a {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
