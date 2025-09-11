@@ -278,7 +278,7 @@ function animateDownloadCounts() {
 function initDownloadCountAnimation() {
     let triggered = false;
     function checkAndAnimate() {
-        const modelsSection = document.getElementById('models');
+        const modelsSection = document.getElementById('huggingface');
         if (!triggered && modelsSection) {
             const rect = modelsSection.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -495,35 +495,26 @@ class EasterEggs {
         const resumeButtonEn = document.getElementById('resume-button-en');
         const resumeButtonCn = document.getElementById('resume-button-cn');
 
-        if (profileImage && resumeButtonEn && resumeButtonCn) {
-            let clickCount = 0;
-            const requiredClicks = 5;
+        // Ensure resume buttons are visible immediately
+        if (resumeButtonEn) {
+            resumeButtonEn.style.opacity = '1';
+            resumeButtonEn.style.pointerEvents = 'auto';
+            resumeButtonEn.style.transition = 'opacity 0.3s ease';
+        }
+        if (resumeButtonCn) {
+            resumeButtonCn.style.opacity = '1';
+            resumeButtonCn.style.pointerEvents = 'auto';
+            resumeButtonCn.style.transition = 'opacity 0.3s ease';
+        }
 
+        // Keep a subtle click animation on profile image, without any unlocking logic
+        if (profileImage) {
             profileImage.addEventListener('click', () => {
-                clickCount++;
-
-                // Add some visual feedback on each click
                 profileImage.style.transition = 'transform 0.2s ease-in-out';
                 profileImage.style.transform = 'scale(1.05)';
                 setTimeout(() => {
                     profileImage.style.transform = 'scale(1)';
                 }, 200);
-
-                if (clickCount >= requiredClicks) {
-                    if (resumeButtonEn.style.opacity !== '1') {
-                        this.showNotification('✨ Surprise! Resume buttons unlocked!');
-                        resumeButtonEn.style.opacity = '1';
-                        resumeButtonEn.style.pointerEvents = 'auto';
-                        resumeButtonCn.style.opacity = '1';
-                        resumeButtonCn.style.pointerEvents = 'auto';
-                        resumeButtonEn.style.transition = 'opacity 0.5s ease';
-                        resumeButtonCn.style.transition = 'opacity 0.5s ease';
-                    }
-                    // Reset for other animations or future interactions
-                    clickCount = 0;
-                } else if (clickCount === 1) { 的
-                     this.showNotification(`Click ${requiredClicks - clickCount} more times...`);
-                }
             });
         }
     }
