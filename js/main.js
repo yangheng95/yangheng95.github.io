@@ -494,27 +494,54 @@ class EasterEggs {
         const profileImage = document.getElementById('profile-avatar');
         const resumeButtonEn = document.getElementById('resume-button-en');
         const resumeButtonCn = document.getElementById('resume-button-cn');
+        let clickCount = 0;
+        const requiredClicks = 3;
 
-        // Ensure resume buttons are visible immediately
+        // Hide resume buttons initially (completely invisible)
         if (resumeButtonEn) {
-            resumeButtonEn.style.opacity = '1';
-            resumeButtonEn.style.pointerEvents = 'auto';
-            resumeButtonEn.style.transition = 'opacity 0.3s ease';
+            resumeButtonEn.style.opacity = '0';
+            resumeButtonEn.style.visibility = 'hidden';
+            resumeButtonEn.style.pointerEvents = 'none';
+            resumeButtonEn.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
         }
         if (resumeButtonCn) {
-            resumeButtonCn.style.opacity = '1';
-            resumeButtonCn.style.pointerEvents = 'auto';
-            resumeButtonCn.style.transition = 'opacity 0.3s ease';
+            resumeButtonCn.style.opacity = '0';
+            resumeButtonCn.style.visibility = 'hidden';
+            resumeButtonCn.style.pointerEvents = 'none';
+            resumeButtonCn.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
         }
 
-        // Keep a subtle click animation on profile image, without any unlocking logic
+        // Add click counter on profile image to unlock resume
         if (profileImage) {
+            profileImage.style.cursor = 'pointer';
+            
             profileImage.addEventListener('click', () => {
+                clickCount++;
+                
+                // Animate profile image
                 profileImage.style.transition = 'transform 0.2s ease-in-out';
                 profileImage.style.transform = 'scale(1.05)';
                 setTimeout(() => {
                     profileImage.style.transform = 'scale(1)';
                 }, 200);
+
+                // Show progress notification
+                if (clickCount < requiredClicks) {
+                    this.showNotification(`点击头像 ${clickCount}/${requiredClicks} 次以解锁简历下载`);
+                } else if (clickCount === requiredClicks) {
+                    // Unlock resume buttons
+                    if (resumeButtonEn) {
+                        resumeButtonEn.style.opacity = '1';
+                        resumeButtonEn.style.visibility = 'visible';
+                        resumeButtonEn.style.pointerEvents = 'auto';
+                    }
+                    if (resumeButtonCn) {
+                        resumeButtonCn.style.opacity = '1';
+                        resumeButtonCn.style.visibility = 'visible';
+                        resumeButtonCn.style.pointerEvents = 'auto';
+                    }
+                    this.showNotification('🎉 简历已解锁！现在可以下载了。');
+                }
             });
         }
     }

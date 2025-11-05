@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniGenBench - Comprehensive Genome Foundation Model Benchmark</title>
+    <meta name="description" content="OmniGenBench - A comprehensive benchmarking platform for genomic foundation models">
+    <link rel="icon" href="../favicon.jpg" type="image/jpeg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .project-page {
+            padding-top: 100px;
+            min-height: 100vh;
+            background: var(--bg-secondary);
+        }
+        .project-header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #6366f1 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .project-header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        .project-badges {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .project-badges img {
+            height: 20px;
+        }
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+            background: var(--bg-primary);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3rem;
+        }
+        .project-content-inner {
+            padding: 2rem;
+        }
+        .project-content h2 {
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .project-content h4 {
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+        .project-content p {
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+        }
+        .project-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+        .external-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            border: 2px solid var(--border-color);
+            transition: var(--transition-fast);
+        }
+        .external-link:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .feature-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            transition: var(--transition-fast);
+        }
+        .feature-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .feature-card h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="../index.html">HY</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#research" class="nav-link">Research</a></li>
+            <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
+            <li class="nav-dropdown">
+                <a href="../index.html#projects" class="nav-link">Projects <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="pyabsa.html"><i class="fas fa-comments"></i> PyABSA</a></li>
+                    <li><a href="omnigenbench.html"><i class="fas fa-dna"></i> OmniGenBench</a></li>
+                    <li><a href="../index.html#projects"><i class="fab fa-github"></i> All Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html#huggingface" class="nav-link">Hugging Face</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<div class="project-page">
+    <div class="project-header">
+        <div class="container">
+            <h1><i class="fas fa-dna"></i> OmniGenBench</h1>
+            <p class="subtitle">A Comprehensive Benchmarking Platform for Genomic Foundation Models</p>
+            <div class="project-badges">
+                <a href="https://github.com/yangheng95/OmniGenBench" target="_blank"><img src="https://img.shields.io/github/stars/yangheng95/OmniGenBench?style=social" alt="GitHub stars"></a>
+                <a href="https://github.com/yangheng95/OmniGenBench" target="_blank"><img src="https://img.shields.io/github/forks/yangheng95/OmniGenBench?style=social" alt="GitHub forks"></a>
+                <a href="https://arxiv.org/abs/2410.01784" target="_blank"><img src="https://img.shields.io/badge/arXiv-2410.01784-b31b1b.svg" alt="arXiv"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="project-content">
+            <div class="project-content-inner">
+                <a href="../index.html#projects" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+
+                <h2>Abstract</h2>
+                <p>
+                    OmniGenBench is a comprehensive benchmarking platform designed to evaluate and compare genomic foundation models across diverse tasks and datasets. As genomic foundation models become increasingly important in computational biology, there is a critical need for standardized evaluation frameworks that can assess their performance, generalizability, and practical utility.
+                </p>
+                <p>
+                    This platform addresses the challenge of heterogeneous evaluation practices in genomic AI by providing a unified framework for benchmarking models on tasks including genome sequence classification, gene expression prediction, variant effect prediction, and more. OmniGenBench enables researchers to systematically compare different models and identify the most suitable approaches for specific applications.
+                </p>
+                <p>
+                    By providing standardized datasets, evaluation metrics, and a flexible API, OmniGenBench facilitates reproducible research and accelerates the development of next-generation genomic foundation models.
+                </p>
+
+                <h4>Keywords</h4>
+                <ul>
+                    <li>Genomic Foundation Models</li>
+                    <li>Benchmarking</li>
+                    <li>Bioinformatics</li>
+                    <li>Machine Learning</li>
+                    <li>Computational Genomics</li>
+                </ul>
+
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-tasks"></i>
+                        <h4>Multi-Task Evaluation</h4>
+                        <p>Comprehensive evaluation across diverse genomic tasks and applications</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Standardized Datasets</h4>
+                        <p>Curated collection of benchmark datasets from various genomic domains</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Performance Metrics</h4>
+                        <p>Unified metrics for fair and consistent model comparison</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Easy Integration</h4>
+                        <p>Simple API for evaluating custom models and datasets</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sync"></i>
+                        <h4>Reproducible</h4>
+                        <p>Standardized protocols ensuring reproducible results</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>Multi-Species</h4>
+                        <p>Support for genomes from various organisms</p>
+                    </div>
+                </div>
+
+                <h2>Supported Tasks</h2>
+                <ul>
+                    <li><strong>Genome Sequence Classification:</strong> Classify genomic sequences by function or type</li>
+                    <li><strong>Gene Expression Prediction:</strong> Predict gene expression levels from sequence</li>
+                    <li><strong>Variant Effect Prediction:</strong> Assess the functional impact of genetic variants</li>
+                    <li><strong>Regulatory Element Identification:</strong> Identify promoters, enhancers, and other regulatory regions</li>
+                    <li><strong>Chromatin Accessibility Prediction:</strong> Predict open chromatin regions</li>
+                    <li><strong>Protein-DNA Binding:</strong> Predict transcription factor binding sites</li>
+                </ul>
+
+                <h2>Why OmniGenBench?</h2>
+                <ul>
+                    <li>🎯 <strong>Standardized Evaluation:</strong> Fair comparison of different models using consistent protocols</li>
+                    <li>📊 <strong>Comprehensive Coverage:</strong> Diverse tasks spanning multiple genomic applications</li>
+                    <li>🔬 <strong>Research-Ready:</strong> Pre-processed datasets and evaluation pipelines</li>
+                    <li>🚀 <strong>Easy to Use:</strong> Simple interface for model evaluation and benchmarking</li>
+                    <li>📖 <strong>Well-Documented:</strong> Extensive documentation and tutorials</li>
+                    <li>🌐 <strong>Community-Driven:</strong> Open platform for contributions and improvements</li>
+                </ul>
+
+                <h2>Getting Started</h2>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto;"><code># Clone the repository
+git clone https://github.com/yangheng95/OmniGenBench.git
+cd OmniGenBench
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run a benchmark
+python benchmark.py --model your_model --task classification</code></pre>
+
+                <h2>Applications</h2>
+                <ul>
+                    <li><strong>Model Selection:</strong> Compare foundation models to choose the best for your application</li>
+                    <li><strong>Model Development:</strong> Evaluate new models during development</li>
+                    <li><strong>Research:</strong> Conduct systematic studies on model capabilities and limitations</li>
+                    <li><strong>Education:</strong> Learn about genomic AI through hands-on benchmarking</li>
+                </ul>
+
+                <h2>Featured Models</h2>
+                <p>OmniGenBench supports evaluation of popular genomic foundation models including:</p>
+                <ul>
+                    <li>DNABERT and DNABERT-2</li>
+                    <li>Nucleotide Transformer</li>
+                    <li>HyenaDNA</li>
+                    <li>Enformer</li>
+                    <li>And many more...</li>
+                </ul>
+
+                <h2>External Links</h2>
+                <div class="external-links">
+                    <a href="https://github.com/yangheng95/OmniGenBench" target="_blank" class="external-link">
+                        <i class="fab fa-github"></i> GitHub Repository
+                    </a>
+                    <a href="https://arxiv.org/abs/2410.01784" target="_blank" class="external-link">
+                        <i class="fas fa-file-pdf"></i> arXiv Paper
+                    </a>
+                    <a href="https://huggingface.co/yangheng" target="_blank" class="external-link">
+                        <i class="fas fa-robot"></i> Hugging Face
+                    </a>
+                </div>
+
+                <h2>Citation</h2>
+                <p>If you use OmniGenBench in your research, please cite:</p>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem;"><code>@article{yang2024omnigenbench,
+  title={OmniGenBench: A Comprehensive Benchmarking Platform for Genomic Foundation Models},
+  author={Yang, Heng and others},
+  journal={arXiv preprint arXiv:2410.01784},
+  year={2024}
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../js/main.js"></script>
+</body>
+</html>
